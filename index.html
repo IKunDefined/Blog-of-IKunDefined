@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>IKunDefined</title>
+        <link rel="stylesheet" href="css/clean.css">
+        <style>
+            html,body{
+                height: 100%;
+            }
+            .wallpaper{
+                width: 100%;
+                height: 100%;
+                background: url("images/wallpaper.jpg") no-repeat fixed;
+                background-size: cover;
+            }
+            .header{
+                width: 100%;
+                height: 50px;
+                background: rgba(255,255,255,0.2);
+                position: fixed;
+                top: 0;
+                z-index: 100;
+            }
+            .header .headNav{
+                width: 1200px;
+                height: 100%;
+                margin: 0 auto;
+            }
+            .headNav li{
+                line-height: 50px;
+                padding: 0 20px;
+                float: left;
+                cursor: pointer;
+            }
+            .headNav li:hover{
+                border-bottom: 2px solid #fff;
+            }
+            .headNav a{
+                width: 100%;
+                height: 100%;
+                color: #fff;
+                display: inline-block;
+            }
+            .main{
+                width: 100%;
+                height: auto;
+                background: #eee;
+                padding: 65px 0;
+            }
+            .mainContent{
+                width: 1200px;
+                height: 100%;
+                margin: 0 auto;
+            }
+            .postList{
+                width: 70%;
+                height: auto;
+                background: #ffffff;
+                padding: 20px;
+                display: inline-block;
+                position: relative;
+                left: 0;
+                text-align: center;
+                box-shadow: 0 0 1px 1px #ccc;
+            }
+            .info{
+                width: 27%;
+                height: auto;
+                float: right;
+            }
+            .info_1,.info_2{
+                padding: 10px;
+                margin-bottom: 25px;
+                box-shadow: 0 0 1px 1px #ccc;
+                background: #ffffff;
+            }
+            footer{
+                width: 100%;
+                height: 150px;
+                line-height: 150px;
+                text-align: center;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="wallpaper"></div>
+        <div class="header">
+            <div class="headNav">
+                <nav>
+                    <ul>
+                        <li><a href="#">IKunDefined</a></li>
+                        <li><a href="#">分类</a></li>
+                        <li><a href="#">动态</a></li>
+                        <li><a href="#">留言</a></li>
+                        <li><a href="#">关于</a></li>
+                        <li><a href="#">实验</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+        <div class="main">
+            <div class="mainContent">
+                <div class="postList">
+                    <div class="postN">
+                        <h2>文章标题</h2>
+                        <div class="postInfo">
+                            <span>发布时间：</span>
+                            <span>更新时间：</span>
+                            <span>阅读人数：</span>
+                        </div>
+                        <p>文章内容简介</p>
+                        <div class="postSubInfo">
+                            <span>分类：</span>
+                            <span>标签：</span>
+                            <button>阅读更多</button>
+                        </div>
+                    </div>
+                    <div class="postN">
+                        <h2>文章标题</h2>
+                        <div class="postInfo">
+                            <span>发布时间：</span>
+                            <span>更新时间：</span>
+                            <span>阅读人数：</span>
+                        </div>
+                        <p>文章内容简介</p>
+                        <div class="postSubInfo">
+                            <span>分类：</span>
+                            <span>标签：</span>
+                            <button>阅读更多</button>
+                        </div>
+                    </div>
+                    <div class="postN">
+                        <h2>文章标题</h2>
+                        <div class="postInfo">
+                            <span>发布时间：</span>
+                            <span>更新时间：</span>
+                            <span>阅读人数：</span>
+                        </div>
+                        <p>文章内容简介</p>
+                        <div class="postSubInfo">
+                            <span>分类：</span>
+                            <span>标签：</span>
+                            <button>阅读更多</button>
+                        </div>
+                    </div>
+                    <div class="postN">
+                        <h2>文章标题</h2>
+                        <div class="postInfo">
+                            <span>发布时间：</span>
+                            <span>更新时间：</span>
+                            <span>阅读人数：</span>
+                        </div>
+                        <p>文章内容简介</p>
+                        <div class="postSubInfo">
+                            <span>分类：</span>
+                            <span>标签：</span>
+                            <button>阅读更多</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="info">
+                    <div class="info_1">
+                        个人介绍
+                    </div>
+                    <div class="info_2">
+                        最新文章
+                    </div>
+                </div>
+            </div>
+        </div>
+        <footer>
+            - Build by IKunDefined -
+        </footer>
+    </body>
+</html>

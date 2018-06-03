@@ -1,0 +1,23 @@
+/* 样式重置 */
+
+*{
+    box-sizing: border-box;
+}
+
+body,p{
+    margin: 0;
+}
+
+ul{
+    margin: 0;
+    padding: 0;
+}
+
+li{
+    list-style: none;
+}
+
+a{
+    color: #000;
+    text-decoration: none;
+}
