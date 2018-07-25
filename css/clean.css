@@ -1,10 +1,12 @@
-/* 样式重置 */
+@charset "utf-8";
+
+/* reset */
 
 *{
     box-sizing: border-box;
 }
 
-body,h1,h2,p{
+body, h1, h2, p{
     margin: 0;
 }
 

@@ -1,0 +1,56 @@
+@charset "utf-8";
+
+/* ==========================
+   Component : Head-Bar
+ ============================ */
+
+/* Style Part */
+
+.head-bar {
+    box-shadow: 0 0 5px #ccc;
+    background: rgba(255,255,255,.2);
+}
+
+/* Layout Part */
+
+.head-bar {
+    position: fixed;
+    top: 0;
+    z-index: 1;
+    width: 100%;
+}
+
+/* Nested Component : Head-Nav
+ ============================= */
+
+/* Style Part */
+
+.head-bar > .head-nav > .navlist {
+    cursor: pointer;
+}
+
+.head-bar > .head-nav > .navlist {
+    color: #fff;
+}
+
+.head-bar > .head-nav > .navlist:hover {
+    background: rgba(255,255,255,1);
+}
+
+.head-bar > .head-nav > .navlist:hover {
+    color: #000;
+}
+
+/* Layout Part */
+
+.head-bar > .head-nav {
+    margin: 0 auto;
+    width: 1200px;
+    height: 50px;
+    line-height: 50px;
+}
+
+.head-bar > .head-nav > .navlist {
+    float: left;
+    padding: 0 20px;
+}
