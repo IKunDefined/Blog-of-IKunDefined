@@ -5,32 +5,48 @@
         <link rel="stylesheet" href="css/clean.css">
         <link rel="stylesheet" href="css/headBar.css">
         <link rel="stylesheet" href="css/postArea.css">
+        <link rel="stylesheet" href="css/personalIntro.css">
         <link rel="stylesheet" href="css/bottomArea.css">
         <style>
+
+            /* Basic Style */
 
             @font-face {
                 font-family: "华文细黑";
                 src: url("font/华文细黑.ttf");
             }
 
-            html,body{
+            html,body {
                 height: 100%;
                 background: #eee;
                 font-family: "华文细黑";
             }
 
-            .wallpaper{
+            .wallpaper {
                 width: 100%;
                 height: 100%;
                 background: url("images/wallpaper.jpg") no-repeat fixed;
                 background-size: cover;
             }
-            footer{
-                width: 100%;
-                height: 150px;
-                line-height: 150px;
-                text-align: center;
+
+            /* Layout Style */
+
+            .main-layout {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                width: 1100px;
+                margin: 20px auto;
             }
+
+            .main-layout > .left {
+                width: 65%;
+            }
+
+            .main-layout > .right {
+                width: 30%;
+            }
+            
         </style>
     </head>
     <body>
@@ -45,7 +61,75 @@
                 <li class="navlist">实验</li>
             </ul>
         </div>
-            <div class="post-area">
+        <div class="main-layout">
+            <div class="left">
+                <div class="post-area">
+                    <div class="title-part">
+                        <h2><a href="post.html">文章标题</a></h2>
+                    </div>
+                    <div class="info-part">
+                        <span>发布时间：XXXX-XX-XX</span>
+                        <span>更新时间：XXXX-XX-XX</span>
+                        <span>阅读人数：XXX</span>
+                    </div>
+                    <div class="detail-part">
+                        <p>
+                            文章内容文章内容文章内容文章内容文章内容文章内容文章内容文章内容文章内容文章内容文章内容文章内容文章内容文章内容文章内容简介文章内容简介文章内容简介文章内容简介文章内容简介文章内容简介文章内容简介文章内容简介文章内容简介文章内容简介
+                        </p>
+                    </div>
+                    <div class="other-info">
+                        <span>分类：测试分类</span>
+                        <span>标签：测试标签1, 测试标签2, 测试标签3</span>
+                    </div>
+                    <div class="read-more">
+                        <button>阅读更多</button>
+                    </div>
+                </div>
+                <div class="post-area">
+                    <div class="title-part">
+                        <h2><a href="post.html">文章标题</a></h2>
+                    </div>
+                    <div class="info-part">
+                        <span>发布时间：XXXX-XX-XX</span>
+                        <span>更新时间：XXXX-XX-XX</span>
+                        <span>阅读人数：XXX</span>
+                    </div>
+                    <div>
+                        <p class="detail-part">
+                            文章内容文章内容文章内容文章内容文章内容文章内容文章内容文章内容文章内容文章内容文章内容文章内容文章内容文章内容文章内容简介文章内容简介文章内容简介文章内容简介文章内容简介文章内容简介文章内容简介文章内容简介文章内容简介文章内容简介
+                        </p>
+                    </div>
+                    <div class="other-info">
+                        <span>分类：测试分类</span>
+                        <span>标签：测试标签1, 测试标签2, 测试标签3</span>
+                    </div>
+                    <div class="read-more">
+                        <button>阅读更多</button>
+                    </div>
+                </div>
+                <div class="post-area">
+                    <div class="title-part">
+                        <h2><a href="post.html">文章标题</a></h2>
+                    </div>
+                    <div class="info-part">
+                        <span>发布时间：XXXX-XX-XX</span>
+                        <span>更新时间：XXXX-XX-XX</span>
+                        <span>阅读人数：XXX</span>
+                    </div>
+                    <div class="detail-part">
+                        <p>
+                            文章内容文章内容文章内容文章内容文章内容文章内容文章内容文章内容文章内容文章内容文章内容文章内容文章内容文章内容文章内容简介文章内容简介文章内容简介文章内容简介文章内容简介文章内容简介文章内容简介文章内容简介文章内容简介文章内容简介
+                        </p>
+                    </div>
+                    <div class="other-info">
+                        <span>分类：测试分类</span>
+                        <span>标签：测试标签1, 测试标签2, 测试标签3</span>
+                    </div>
+                    <div class="read-more">
+                        <button>阅读更多</button>
+                    </div>
+                </div>
+                <div class="post-area">
                 <div class="title-part">
                     <h2><a href="post.html">文章标题</a></h2>
                 </div>
@@ -66,73 +150,26 @@
                 <div class="read-more">
                     <button>阅读更多</button>
                 </div>
-            </div>
-            <div class="post-area">
-                <div class="title-part">
-                    <h2><a href="post.html">文章标题</a></h2>
-                </div>
-                <div class="info-part">
-                    <span>发布时间：XXXX-XX-XX</span>
-                    <span>更新时间：XXXX-XX-XX</span>
-                    <span>阅读人数：XXX</span>
-                </div>
-                <div>
-                    <p class="detail-part">
-                        文章内容文章内容文章内容文章内容文章内容文章内容文章内容文章内容文章内容文章内容文章内容文章内容文章内容文章内容文章内容简介文章内容简介文章内容简介文章内容简介文章内容简介文章内容简介文章内容简介文章内容简介文章内容简介文章内容简介
-                    </p>
-                </div>
-                <div class="other-info">
-                    <span>分类：测试分类</span>
-                    <span>标签：测试标签1, 测试标签2, 测试标签3</span>
-                </div>
-                <div class="read-more">
-                    <button>阅读更多</button>
                 </div>
             </div>
-            <div class="post-area">
-                <div class="title-part">
-                    <h2><a href="post.html">文章标题</a></h2>
-                </div>
-                <div class="info-part">
-                    <span>发布时间：XXXX-XX-XX</span>
-                    <span>更新时间：XXXX-XX-XX</span>
-                    <span>阅读人数：XXX</span>
-                </div>
-                <div class="detail-part">
-                    <p>
-                        文章内容文章内容文章内容文章内容文章内容文章内容文章内容文章内容文章内容文章内容文章内容文章内容文章内容文章内容文章内容简介文章内容简介文章内容简介文章内容简介文章内容简介文章内容简介文章内容简介文章内容简介文章内容简介文章内容简介
-                    </p>
-                </div>
-                <div class="other-info">
-                    <span>分类：测试分类</span>
-                    <span>标签：测试标签1, 测试标签2, 测试标签3</span>
-                </div>
-                <div class="read-more">
-                    <button>阅读更多</button>
+            <div class="right">
+                <div class="personal-intro">
+                    <div class="personal-info">
+                        <div class="avatar">
+                            <img src="images/avatar.jpg" alt="个人头像" title="IKunDefined">
+                        </div>
+                        <h2 class="name">IKunDefined</h2>
+                        <p class="motto">- 矛盾共生体 -</p>
+                    </div>
+                    <ul class="social-link">
+                        <li class="bilibili_1 linkicons"></li>
+                        <li class="bilibili_2 linkicons"></li>
+                        <li class="github linkicons"></li>
+                        <li class="weibo linkicons"></li>
+                    </ul>
                 </div>
             </div>
-            <div class="post-area">
-                <div class="title-part">
-                    <h2><a href="post.html">文章标题</a></h2>
-                </div>
-                <div class="info-part">
-                    <span>发布时间：XXXX-XX-XX</span>
-                    <span>更新时间：XXXX-XX-XX</span>
-                    <span>阅读人数：XXX</span>
-                </div>
-                <div class="detail-part">
-                    <p>
-                        文章内容文章内容文章内容文章内容文章内容文章内容文章内容文章内容文章内容文章内容文章内容文章内容文章内容文章内容文章内容简介文章内容简介文章内容简介文章内容简介文章内容简介文章内容简介文章内容简介文章内容简介文章内容简介文章内容简介
-                    </p>
-                </div>
-                <div class="other-info">
-                    <span>分类：测试分类</span>
-                    <span>标签：测试标签1, 测试标签2, 测试标签3</span>
-                </div>
-                <div class="read-more">
-                    <button>阅读更多</button>
-                </div>
-            </div>
+        </div>
         <div class="bottom-area">
             - Build by IKunDefined -
         </div>

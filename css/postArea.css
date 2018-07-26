@@ -14,15 +14,18 @@
 /* Layout Part */
 
 .post-area {
-    width: 1200px;
-    margin: 20px auto;
+    margin-bottom: 20px;
     padding: 20px;
     text-align: center;
     overflow: hidden;
 }
 
+.post-area:last-child {
+    margin-bottom: 0;
+}
+
 /* Nested Component : Title-Part
-=============================== */
+================================ */
 
 /* Style Part */
 

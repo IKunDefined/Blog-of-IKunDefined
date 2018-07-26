@@ -1,0 +1,88 @@
+@charset "utf-8";
+
+/* ==============================
+   Component : Personal - Intro  
+ ================================ */
+
+/* Style Part */
+
+.personal-intro {
+    box-shadow: 0 0 1px 1px #ccc;
+    background: #fff;
+}
+
+/* Layout Part */
+
+.personal-intro {
+    text-align: center;
+    padding: 30px;
+}
+
+/* Component : Personal - Info
+============================== */
+
+/* Style Part */
+
+.personal-intro > .personal-info > .avatar {
+    cursor: pointer;
+    height: 120px;
+    width: 120px;
+    margin: 0 auto;
+    overflow: hidden;
+    border: 1px solid #ccc;
+}
+
+.personal-intro > .personal-info > .name {
+    cursor: pointer;
+}
+
+.personal-intro > .personal-info > .motto {
+    -webkit-user-select: none;
+}
+
+.personal-intro > .personal-info > .avatar > img {
+    height: 120px;
+}
+
+/* Layout Part */
+
+.avatar, .name, .motto {
+    margin: 10px 0;
+}
+
+/* Component : Social - Link
+============================ */
+
+/* Style Part */
+
+.personal-intro > .social-link > li {
+    cursor: pointer;
+}
+
+.personal-intro > .social-link > .bilibili_1, .bilibili_2 {
+    background: url("../icons/bilibili.png");
+}
+
+.personal-intro > .social-link > .github {
+    background: url("../icons/github.png")
+}
+
+.personal-intro > .social-link > .weibo {
+    background: url("../icons/weibo.png")
+}
+
+/* Layout Part */
+
+.personal-intro > .social-link {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.personal-intro > .social-link > li {
+    float: left;
+    width: 25px;
+    height: 25px;
+    margin: 0 15px;
+}
