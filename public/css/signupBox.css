@@ -1,0 +1,44 @@
+/* ==============================
+   Component : Signup - Box 
+ ================================ */
+
+ /* Style Part */
+
+ .signup-box {
+    box-shadow: 0 0 1px 1px #ccc;
+    background: #fff;
+}
+
+.signup-box > div > p > input {
+    width: 70%;
+    height: 30px;
+}
+
+.signup-box > div > p:last-child > input {
+    width: 100%;
+}
+
+/* Layout Part */
+
+.signup-box {
+    text-align: center;
+    padding: 30px;
+    margin-top: 20px;
+}
+
+.signup-box > div {
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.signup-box > div > p {
+    line-height: 30px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.signup-box > span {
+    float: right;
+}

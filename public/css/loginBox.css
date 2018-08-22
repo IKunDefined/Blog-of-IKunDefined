@@ -1,0 +1,44 @@
+/* ==============================
+   Component : Login - Box 
+ ================================ */
+
+ /* Style Part */
+
+ .login-box {
+    box-shadow: 0 0 1px 1px #ccc;
+    background: #fff;
+}
+
+.login-box > div > p > input {
+    width: 70%;
+    height: 30px;
+}
+
+.login-box > div > p:last-child > input {
+    width: 100%;
+}
+
+/* Layout Part */
+
+.login-box {
+    text-align: center;
+    padding: 30px;
+    margin-top: 20px;
+}
+
+.login-box > div {
+    height: 150px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.login-box > div > p {
+    line-height: 30px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.login-box > span {
+    float: right;
+}

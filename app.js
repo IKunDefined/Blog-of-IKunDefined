@@ -15,6 +15,12 @@ app.use("/admin", require("./routers/admin"));
 app.use("/api", require("./routers/api"));
 app.use("/", require("./routers/main"));
 
-app.listen(3000);
-
-console.log("your blog is running in http://localhost:3000");
+mongoose.connect("mongodb://localhost:27017/blog-of-ikundefined", {useNewUrlParser:true}, function(err){
+    if(err){
+        console.log("数据库连接失败");
+    }else{
+        console.log("数据库连接成功");
+        app.listen(3000);
+        console.log("your blog is running in http://localhost:3000");
+    }
+});

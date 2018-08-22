@@ -8,13 +8,17 @@
         <link rel="stylesheet" href="/public/css/postArea.css">
         <link rel="stylesheet" href="/public/css/personalIntro.css">
         <link rel="stylesheet" href="/public/css/bottomArea.css">
+        <link rel="stylesheet" href="/public/css/signupBox.css">
+        <link rel="stylesheet" href="/public/css/loginBox.css">
+        <script src="https://cdn.bootcss.com/jquery/1.12.4/jquery.js"></script>
+        <script src="/public/js/index.js"></script>
         <style>
 
             /* Basic Style */
 
             @font-face {
                 font-family: "华文细黑";
-                src: url("font/华文细黑.ttf");
+                src: url("/public/font/华文细黑.ttf");
             }
 
             html,body {
@@ -168,6 +172,39 @@
                         <li class="github linkicons"></li>
                         <li class="weibo linkicons"></li>
                     </ul>
+                </div>
+                <div id="signup-box" class="signup-box" style="display:none;">
+                    <div>
+                        <p>
+                            <span>账号：</span><input name="username" type="text">
+                        </p>
+                        <p>
+                            <span>密码：</span><input name="password" type="password">
+                        </p>
+                        <p>
+                            <span>确认密码：</span><input name="repassword" type="password">
+                        </p>
+                        <p>
+                            <input name="register" type="button" value="注册">
+                        </p>
+                    </div>
+                    <span><a href="javascript:;">马上登陆</a></span>
+                </div>
+                <div id="login-box" class="login-box">
+                    <div>
+                        <p>
+                            <span>账号：</span><input name="username" type="text">
+                        </p>
+                        <p>
+                            <span>密码：</span><input name="password" type="password">
+                        </p>
+                        <p>
+                            <input type="button" value="登录">
+                        </p>
+                    </div>
+                    <span>
+                        <a href="javascript:;">现在注册</a>
+                    </span>
                 </div>
             </div>
         </div>
