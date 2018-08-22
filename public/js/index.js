@@ -16,16 +16,22 @@ $(function(){
     $signupBox.find("input[type=button]").on("click",function(){
         $.ajax({
             type: "post",
-            url: "/api/register",
+            url: "/api/user/register",
             data: {
                 username: $signupBox.find("[name='username']").val(),
                 password: $signupBox.find("[name='password']").val(),
                 repassword: $signupBox.find("[name='repassword']").val()
             },
             dataType: "json",
-            success: function(result){
-                console.log(result);
+            success: function(result) {
+                $signupBox.find(".warning").html(result.message);
+                if(!result.code){
+                    setTimeout(function(){
+                        $loginBox.show();
+                        $signupBox.hide();
+                    }, 1000);
+                }
             }
         });
-    });
-});
+    })
+})

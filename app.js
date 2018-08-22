@@ -1,8 +1,11 @@
 var express = require("express");
 var swig = require("swig");
 var mongoose = require("mongoose");
+var bodyParser = require("body-parser");
 
 var app = express();
+
+app.use(bodyParser.urlencoded({extended: true}));
 
 app.engine("html", swig.renderFile);
 app.set("views", "./views");

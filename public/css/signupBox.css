@@ -39,6 +39,11 @@
     justify-content: space-between;
 }
 
-.signup-box > span {
+.signup-box > span:first-of-type {
     float: right;
+}
+
+.signup-box > .warning {
+    float: left;
+    color: #f00;
 }
