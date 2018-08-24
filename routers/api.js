@@ -40,7 +40,7 @@ router.post("/user/register", function(req, res, next){
     }).then(function(userInfo){
         if(userInfo){
             responseData.code = 4;
-            responseData.message = "用户名已被注册";
+            responseData.message = "用户名已被注册！";
             res.json(responseData);
             return;
         }

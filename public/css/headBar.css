@@ -29,15 +29,18 @@
     cursor: pointer;
 }
 
-.head-bar > .head-nav > .navlist {
-    color: #fff;
-}
-
 .head-bar > .head-nav > .navlist:hover {
     background: rgba(255,255,255,1);
 }
 
-.head-bar > .head-nav > .navlist:hover {
+.head-bar > .head-nav > .navlist > a {
+    color: #fff;
+    display: block;
+    height: 100%;
+    width: 100%;
+}
+
+.head-bar > .head-nav > .navlist:hover > a {
     color: #000;
 }
 
