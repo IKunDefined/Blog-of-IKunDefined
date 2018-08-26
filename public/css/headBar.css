@@ -6,17 +6,18 @@
 
 /* Style Part */
 
-.head-bar {
+#head-bar {
     box-shadow: 0 0 5px #ccc;
     background: rgba(255,255,255,.2);
 }
 
 /* Layout Part */
 
-.head-bar {
+#head-bar {
     position: fixed;
     top: 0;
     z-index: 1;
+    height: 50px;
     width: 100%;
 }
 
@@ -25,35 +26,35 @@
 
 /* Style Part */
 
-.head-bar > .head-nav > .navlist {
+#head-bar > .head-nav > .navlist {
     cursor: pointer;
 }
 
-.head-bar > .head-nav > .navlist:hover {
+#head-bar > .head-nav > .navlist:hover {
     background: rgba(255,255,255,1);
 }
 
-.head-bar > .head-nav > .navlist > a {
+#head-bar > .head-nav > .navlist > a {
     color: #fff;
     display: block;
     height: 100%;
     width: 100%;
 }
 
-.head-bar > .head-nav > .navlist:hover > a {
+#head-bar > .head-nav > .navlist:hover > a {
     color: #000;
 }
 
 /* Layout Part */
 
-.head-bar > .head-nav {
+#head-bar > .head-nav {
     margin: 0 auto;
     width: 1200px;
     height: 50px;
     line-height: 50px;
 }
 
-.head-bar > .head-nav > .navlist {
+#head-bar > .head-nav > .navlist {
     float: left;
     padding: 0 20px;
 }

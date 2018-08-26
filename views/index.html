@@ -26,7 +26,7 @@
                 font-family: "华文细黑";
             }
 
-            .wallpaper {
+            #wallpaper {
                 width: 100%;
                 height: 100%;
                 background: url("/public/images/wallpaper.jpg") no-repeat fixed;
@@ -54,8 +54,8 @@
         </style>
     </head>
     <body>
-        <div class="wallpaper"></div>
-        <div class="head-bar">
+        <div id="wallpaper"></div>
+        <div id="head-bar">
             <ul class="head-nav">
                 <li class="navlist"><a href="/public/unopen.html">IKunDefined</a></li>
                 <li class="navlist"><a href="/public/unopen.html">分类</a></li>
@@ -224,4 +224,37 @@
             - Build by IKunDefined -
         </div>
     </body>
+    <script>
+        var wallPaper = document.getElementById("wallpaper");
+        wallPaper.style.height = document.documentElement.clientHeight + "px";
+        wallPaper.style.width = document.documentElement.scrollWidth + "px";
+        window.onresize = function(){
+            wallPaper.style.height = document.documentElement.clientHeight + "px";
+            wallPaper.style.width = document.documentElement.scrollWidth + "px";
+        }
+        window.onscroll = function(){
+            var scrollTop = document.documentElement.scrollTop;
+            var headBar = document.getElementById("head-bar");
+            var a = headBar.getElementsByTagName("a");
+            var wallPaperHeight = wallPaper.offsetHeight;
+            var headBarHeight = headBar.offsetHeight;
+            var changePoint = wallPaperHeight - headBarHeight;
+            switch(scrollTop > changePoint){
+                case true: 
+                    headBar.style.background = "rgba(255,255,255,1)";
+                    for(var index in a) {
+                        a[index].style.color = "#000";  // bug
+                    }
+                    headBar.style.transition = "all .1s";
+                break;
+                case false: 
+                    headBar.style.background = "rgba(255,255,255,.2)";
+                    for(var index in a) {
+                        a[index].style.color = "#fff";  // bug
+                    }
+                    headBar.style.transition = "all .1s";
+                break;
+            }
+        }
+    </script>
 </html>
