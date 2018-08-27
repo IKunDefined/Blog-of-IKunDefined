@@ -43,18 +43,17 @@ $(function(){
             type: "post",
             url: "/api/user/login",
             data: {
-                username: $loginBox.find("input[name='username']"),
-                password: $loginBox.find("input[name='password']")
+                username: $loginBox.find("input[name='username']").val(),
+                password: $loginBox.find("input[name='password']").val()
             },
             dataType: "json",
-            success: function(result){
-                if(!result){
-                    $loginBox.find(".warning").html(result.message);
-                }else{
+            success: function(result) {
+                $loginBox.find(".warning").html(result.message);
+                if(!result.code){
                     setTimeout(function(){
                         $loginBox.hide();
                         $welcomeBox.show();
-                    },1000);
+                    }, 1000);
                 }
             }
         });

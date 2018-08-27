@@ -61,4 +61,32 @@ router.post("/user/register", function(req, res, next){
     });
 });
 
+router.post("/user/login", function(req, res, next){
+    // 登录逻辑
+    var username = req.body.username;
+    var password = req.body.password;
+    if(username == "" || password == ""){
+        responseData.code = 1;
+        responseData.message = "用户名或密码不能为空";
+        res.json(responseData);
+        return;
+    }
+    // 查询数据库中用户名和密码记录是否存在，如果存在，则登陆成功
+    User.findOne({
+        username: username,
+        password: password
+    }).then(function(userInfo){
+        if(!userInfo){
+            responseData.code = 2;
+            responseData.message = "用户名或密码错误";
+            res.json(responseData);
+            return;
+        }
+        responseData.message = "登陆成功";
+        res.json(responseData);
+        return;
+    });
+    // 用户名和密码正确
+});
+
 module.exports = router;

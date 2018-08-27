@@ -1,15 +1,18 @@
 /* ==============================
    Component : Login - Box 
+   Component : Signup - Box
+   Component : Welcome - Box
  ================================ */
 
  /* Style Part */
 
- #login-box, #signup-box {
+ #login-box, #signup-box, #welcome-box {
     box-shadow: 0 0 1px 1px #ccc;
     background: #fff;
     text-align: center;
-    padding: 30px;
+    padding: 20px;
     margin-top: 20px;
+    overflow: hidden;
 }
 
 #login-box > div > p > input,
