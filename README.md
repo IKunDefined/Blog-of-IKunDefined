@@ -28,6 +28,13 @@
 * Node.js
 * MongoDB
 
+## 基本功能
+
+* 用户注册
+* 用户登录
+* 后台管理
+* 前台阅览
+
 ## 本地部署
 
 1. `git clone https://github.com/IKunDefined/Blog-of-IKunDefined.git`或者下载.zip压缩包
