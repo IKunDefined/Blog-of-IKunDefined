@@ -83,6 +83,14 @@ router.post("/user/login", function(req, res, next){
             return;
         }
         responseData.message = "登陆成功";
+        responseData.userInfo = {
+            _id: userInfo._id,
+            username: userInfo.username
+        }
+        req.cookies.set("userinfo", JSON.stringify({
+            _id: userInfo._id,
+            username: userInfo.username
+        }));
         res.json(responseData);
         return;
     });

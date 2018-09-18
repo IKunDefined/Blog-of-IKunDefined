@@ -172,6 +172,12 @@
                         <li class="weibo linkicons"></li>
                     </ul>
                 </div>
+                {% if userInfo._id %}
+                <div id="welcome-box" style="display:none;">
+                    <p>欢迎<span class="username"></span>来到我的博客。</p>
+                    <a href="javascript:;">注销账号</a>
+                </div>
+                {% else %}
                 <div id="signup-box">
                     <div>
                         <p>
@@ -214,10 +220,7 @@
                     </span>
                     <span class="warning"></span>
                 </div>
-                <div id="welcome-box" style="display:none;">
-                    <p>欢迎<span></span>的登录</p>
-                    <a href="javascript:;">注销账号</a>
-                </div>
+                <%endif%>
             </div>
         </div>
         <div class="bottom-area">
