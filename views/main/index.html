@@ -58,11 +58,11 @@
         <div id="head-bar">
             <ul class="head-nav">
                 <li><a class="navlist" href="#">IKunDefined</a></li>
-                <li><a class="navlist" href="/public/unopen.html">分类</a></li>
-                <li><a class="navlist" href="/public/unopen.html">动态</a></li>
-                <li><a class="navlist" href="/public/unopen.html">留言</a></li>
-                <li><a class="navlist" href="/public/unopen.html">关于</a></li>
-                <li><a class="navlist" href="/public/unopen.html">实验</a></li>
+                <li><a class="navlist" href="#">分类</a></li>
+                <li><a class="navlist" href="#">动态</a></li>
+                <li><a class="navlist" href="#">留言</a></li>
+                <li><a class="navlist" href="#">关于</a></li>
+                <li><a class="navlist" href="#">实验</a></li>
             </ul>
         </div>
         <div class="main-layout">
@@ -71,7 +71,7 @@
                     {% for content in contents  %}
                     <div class="post-area">
                         <div class="title-part">
-                            <h2><a href="/public/post.html">{{ content.title }}</a></h2>
+                            <h2><a href="/article/{{ content.id }}">{{ content.title }}</a></h2>
                         </div>
                         <div class="info-part">
                             <span>发布时间：{{ content.date }}</span>
@@ -87,7 +87,7 @@
                             <!-- <span>标签：测试标签1, 测试标签2, 测试标签3</span> -->
                         </div>
                         <div class="read-more">
-                            <button>阅读更多</button>
+                            <a class="button" href="/article/{{ content.id }}">阅读更多</a>
                         </div>
                     </div>
                     {% endfor %}
@@ -105,16 +105,19 @@
                         <p class="motto">- 矛盾共生体 -</p>
                     </div>
                     <ul class="social-link">
-                        <li class="bilibili_1 linkicons"></li>
-                        <li class="bilibili_2 linkicons"></li>
-                        <li class="github linkicons"></li>
-                        <li class="weibo linkicons"></li>
+                        <li class="bilibili_1 linkicons" onclick="location.href='https://space.bilibili.com/15563957'"></li>
+                        <li class="bilibili_2 linkicons" onclick="location.href='https://space.bilibili.com/1395467'"></li>
+                        <li class="github linkicons" onclick="location.href='https://github.com/ikundefined'"></li>
+                        <li class="weibo linkicons" onclick="location.href='https://weibo.com/p/1005052021331643'"></li>
                     </ul>
                 </div>
                 {% if userInfo %}
                 <div id="welcome-box">
-                    <p>欢迎{{ userInfo.username }}来到我的博客。</p>
+                    {% if isAdmin %}
                     <a href="/admin">进入管理界面</a>
+                    {% else %}
+                    <p>欢迎{{ userInfo.username }}来到我的博客。</p>
+                    {% endif %}
                     <a id="logout" href="javascript:;">注销</a>
                 </div>
                 {% else %}

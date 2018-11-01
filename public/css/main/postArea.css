@@ -71,9 +71,12 @@
 
 /* Style Part */
 
-.read-more > button {
+.read-more > a {
+    display: block;
     width: 80px;
     height: 30px;
+    line-height: 30px;
+    font-size: 14px;
     color: #fff;
     background: #000;
     border: none;

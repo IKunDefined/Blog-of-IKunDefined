@@ -61,7 +61,7 @@ $(function(){
             success: function(responseData) {
                 if (!responseData.code) {
                     setTimeout(function() {
-                        location.reload();
+                        location.href = "/";
                     }, 1000);
                 }
             }

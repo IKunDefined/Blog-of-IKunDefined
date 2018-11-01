@@ -30,6 +30,7 @@ app.use("/public", express.static(__dirname + "/public"));
 app.use("/", require("./routers/main"));
 app.use("/api", require("./routers/api"));
 app.use("/admin", require("./routers/admin"));
+app.use("/article", require("./routers/article"));
 
 mongoose.connect("mongodb://localhost:27017/blog-of-ikundefined", {useNewUrlParser:true}, function(){
     console.log("database connect success");

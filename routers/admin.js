@@ -13,10 +13,19 @@ router.use(function(req, res, next) {
 })
 
 router.use(function(req, res, next) {
-    if (req.userInfo) {
-        next();
+    if (req.userInfo){
+        User.findOne({
+            username: req.userInfo.username
+        }).then(function(userInfo) {
+            req.userInfo.isAdmin = userInfo.isAdmin;
+            if (req.userInfo.isAdmin) {
+                next();
+            } else {
+                res.render("main/jump");
+            }
+        });
     } else {
-        res.render("jump");
+        res.render("main/jump");
     }
 });
 

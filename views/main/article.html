@@ -3,8 +3,8 @@
     <head>
         <meta charset="UTF-8">
         <title>文章页面</title>
-        <link rel="stylesheet" href="css/clean.css">
-        <link rel="stylesheet" href="css/header.css">
+        <link rel="stylesheet" href="/public/css/clean.css">
+        <link rel="stylesheet" href="/public/css/header.css">
         <style>
             body{
                 background: #eee;
@@ -74,34 +74,34 @@
             <div class="headNav">
                 <nav>
                     <ul>
-                        <li><a href="index.html">IKunDefined</a></li>
-                        <li><a href="unopen.html">分类</a></li>
-                        <li><a href="unopen.html">动态</a></li>
-                        <li><a href="unopen.html">留言</a></li>
-                        <li><a href="unopen.html">关于</a></li>
-                        <li><a href="unopen.html">实验</a></li>
+                        <li><a href="/">IKunDefined</a></li>
+                        <li><a href="#">分类</a></li>
+                        <li><a href="#">动态</a></li>
+                        <li><a href="#">留言</a></li>
+                        <li><a href="#">关于</a></li>
+                        <li><a href="#">实验</a></li>
                     </ul>
                 </nav>
             </div>
         </div>
         <div class="main">
             <div class="mainTop">
-                <h1>文章标题</h1>
+                <h1>{{ contentInfo.title }}</h1>
                 <div class="subInfo">
                     <ul>
-                        <li>日期</li>
-                        <li>更新</li>
-                        <li>分类</li>
-                        <li>标签</li>
+                        <li>
+                            作者：{{ contentInfo.author }}
+                        </li>
+                        <li>
+                            日期：{{ contentInfo.date }}
+                        </li>
+                        <!-- <li>分类</li>
+                        <li>标签</li> -->
                     </ul>
                 </div>
             </div>
             <div class="mainCenter">
-                <p>
-                    文章内容文章内容文章内容文章内容文文章内容文章内容文章内容章内容文章内容文章内容文章内容文章内容文文章内容文章内容文章内容章内容
-                    文章内容文章内容文章内容文章内容文文章内容文章内容文章内容章内容文章内容文章内容文章内容文章内容文文章内容文章内容文章内容章内容
-                    文章内容文章内容文章内容文章内容文文章内容文章内容文章内容章内容
-                </p>
+                <p>{{ contentInfo.article }}</p>
             </div>
         </div>
         <footer>
