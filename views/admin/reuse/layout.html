@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="/public/css/reset.css">
+    <link rel="stylesheet" href="/public/css/layout.css">
+</head>
+<body>
+    <header>
+        <ul class="left">
+            <li><a href="/admin">管理首页</a></li>
+            <li><a href="/admin/user">用户管理</a></li>
+            <li><a href="/admin/category">分类管理</a></li>
+            <li><a href="/admin/content">内容管理</a></li>
+        </ul>
+        <ul class="right">
+            <li>
+                <a href="/">
+                    首页
+                </a>
+            </li>
+            <li>
+                <a id="logout" href="javascript:;">
+                    注销
+                </a>
+            </li>
+        </ul>
+    </header>
+    <div class="main">
+        {% block main %}
+        {% endblock %}
+    </div>
+    <script src="http://libs.baidu.com/jquery/2.1.4/jquery.min.js"></script>
+    <script src="/public/js/main/index.js"></script>
+    {% if isCategory %}
+        {% include "../include/addBox.html" %}
+        {% include "../include/addCategory.html" %}
+    {% elseif isContent %}
+        {% include "../include/addBox.html" %}
+        {% include "../include/addContent.html" %}
+    {% endif %}
+</body>
+</html>

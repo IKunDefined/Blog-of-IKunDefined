@@ -1,0 +1,7 @@
+#mask {
+    background: #0005;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10;
+}

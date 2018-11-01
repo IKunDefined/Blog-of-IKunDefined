@@ -1,0 +1,40 @@
+#content .title {
+    overflow: hidden;
+}
+
+#content .title h2 {
+    float: left;
+}
+
+#content .title button {
+    float: right;
+}
+
+#add-box {
+    padding-top: 40px;
+    width: 1000px;
+    height: 600px;
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #fff;
+    z-index: 20;
+}
+
+#add-box a {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 25px;
+    height: 25px;
+    line-height: 25px;
+    text-align: center;
+    background: #f00;
+}
+
+#add-box textarea {
+    height: 400px;
+    width: 800px;
+}

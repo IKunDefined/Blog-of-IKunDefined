@@ -1,0 +1,39 @@
+{% extends "reuse/layout.html" %}
+{% block main %}
+<link rel="stylesheet" href="/public/css/admin/category.css">
+<link rel="stylesheet" href="/public/css/admin/reuse/mask.css">
+<link rel="stylesheet" href="/public/css/admin/reuse/table.css">
+<div id="category">
+    <div class="title">
+        <h2>分类管理</h2>
+        <button>添加分类</button>
+    </div>
+    {% if categories %}
+    <table>
+        <thead>
+            <tr>
+                <th>分类名称</th>
+                <th>操作</th>
+            </tr>
+        </thead>
+        <tbody> 
+            {% for category in categories %}
+            <tr>
+                <td>{{ category.name }}</td>
+                <td>
+                    <button>删除</button>
+                </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    {% else %}
+    <p>暂无分类</p>
+    {% endif %}
+</div>
+<div id="add-box" style="display:none">
+    <a href="javascript:;">&times;</a>
+    <input type="text">
+    <button>添加</button>
+</div>
+{% endblock %}

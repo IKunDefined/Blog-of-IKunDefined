@@ -1,0 +1,32 @@
+{% extends "reuse/layout.html" %}
+{% block main %}
+<link rel="stylesheet" href="/public/css/admin/user.css">
+<link rel="stylesheet" href="/public/css/admin/reuse/table.css">
+<div id="user">
+    <div class="title">
+        <h2>用户管理</h2>
+    </div>
+    <table>
+        <thead>
+            <tr>
+                <th>用户ID</th>
+                <th>用户名</th>
+                <th>是否为管理员</th>
+                <th>操作</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for user in users %}
+            <tr>
+                <td>{{ user.id }}</td>
+                <td>{{ user.username }}</td>
+                <td>{{ user.isAdmin }}</td>
+                <td>
+                    <button>删除</button>
+                </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+{% endblock %}
