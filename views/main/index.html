@@ -4,13 +4,13 @@
         <meta charset="utf-8">
         <title>IKunDefined</title>
         <link rel="stylesheet" href="/public/css/clean.css">
-        <link rel="stylesheet" href="/public/css/headBar.css">
-        <link rel="stylesheet" href="/public/css/postArea.css">
-        <link rel="stylesheet" href="/public/css/personalIntro.css">
-        <link rel="stylesheet" href="/public/css/bottomArea.css">
-        <link rel="stylesheet" href="/public/css/userBox.css">
+        <link rel="stylesheet" href="/public/css/main/headBar.css">
+        <link rel="stylesheet" href="/public/css/main/postArea.css">
+        <link rel="stylesheet" href="/public/css/main/personalIntro.css">
+        <link rel="stylesheet" href="/public/css/main/bottomArea.css">
+        <link rel="stylesheet" href="/public/css/main/userBox.css">
         <script src="https://cdn.bootcss.com/jquery/1.12.4/jquery.js"></script>
-        <script src="/public/js/index.js"></script>
+        <script src="/public/js/main/index.js"></script>
         <style>
 
             /* Basic Style */
@@ -172,13 +172,14 @@
                         <li class="weibo linkicons"></li>
                     </ul>
                 </div>
-                {% if userInfo._id %}
-                <div id="welcome-box" style="display:none;">
-                    <p>欢迎<span class="username"></span>来到我的博客。</p>
-                    <a href="javascript:;">注销账号</a>
+                {% if userInfo %}
+                <div id="welcome-box">
+                    <p>欢迎{{ userInfo.username }}来到我的博客。</p>
+                    <a href="/admin">进入管理界面</a>
+                    <a id="logout" href="javascript:;">注销</a>
                 </div>
                 {% else %}
-                <div id="signup-box">
+                <div id="signup-box" style="display: none;">
                     <div>
                         <p>
                             <span>账号：</span>
@@ -201,7 +202,7 @@
                     </span>
                     <span class="warning"></span>
                 </div>
-                <div id="login-box" style="display: none;">
+                <div id="login-box">
                     <div>
                         <p>
                             <span>账号：</span>
@@ -220,7 +221,7 @@
                     </span>
                     <span class="warning"></span>
                 </div>
-                <%endif%>
+                {%endif%}
             </div>
         </div>
         <div class="bottom-area">
