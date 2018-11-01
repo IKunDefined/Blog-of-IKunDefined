@@ -1,7 +1,6 @@
 $(function(){
     var $loginBox = $("#login-box");
     var $signupBox = $("#signup-box");
-    var $welcomeBox = $("#welcome-box");
     var $logoutButton = $("#logout");
 
     $loginBox.find("a").on("click", function(){

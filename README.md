@@ -1,6 +1,6 @@
 # the Blog Of IKunDefined
 
-基于**Node.js**+**Express**+**MongoDB**的IKunDefined的个人博客
+基于**Node.js**+**Express**+**MongoDB**的个人博客
 
 参考教程
 
@@ -13,10 +13,10 @@
 * Node.js
 * Express
 * MongoDB
+* jQuery
 
 ### 辅助工具
 
-* jQuery
 * Cookies
 * Mongoose
 * body-parser
@@ -45,4 +45,4 @@
 
 ***
 
-项目正在持续更新
+仍在升级、开发和维护中

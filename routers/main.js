@@ -15,8 +15,7 @@ router.use(function(req, res, next) {
         });
     } else {
         next();
-    }
-    
+    }  
 })
 
 router.get("/", function(req, res){
