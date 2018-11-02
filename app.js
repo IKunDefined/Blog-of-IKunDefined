@@ -46,8 +46,11 @@ if (!DB_HOST || !DB_NAME) {
     process.exit(5);
 }
 
-mongoose.connect(`mongodb://${DB_USER}:${DB_PASS}@${DB_HOST}/${DB_NAME}`, {useNewUrlParser:true}, function(){
-    console.log("database connect success");
-    app.listen(3000);
-    console.log("your blog is running in http://localhost:3000");
+mongoose.connect(`mongodb://${DB_HOST}/${DB_NAME}`, {useNewUrlParser:true}, function(err){
+    if (!err) {
+        app.listen(3000);
+        console.log("your blog is running in http://localhost:3000");
+    } else {
+        console.log(err)
+    }
 });
