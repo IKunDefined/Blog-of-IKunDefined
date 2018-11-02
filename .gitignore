@@ -3,3 +3,6 @@ node_modules
 
 # 数据库文件夹
 db
+
+# 配置文件
+.env
