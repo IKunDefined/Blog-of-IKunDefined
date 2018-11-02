@@ -4,6 +4,9 @@ const mongoose = require("mongoose");
 const bodyParser = require("body-parser");
 const Cookies = require("cookies");
 
+// 读取配置文件
+require('dotenv').config()
+
 const app = express();
 
 app.use(bodyParser.urlencoded({
@@ -36,7 +39,14 @@ app.use("/message", require("./routers/message"));
 app.use("/test", require("./routers/test"));
 app.use("/about", require("./routers/about"));
 
-mongoose.connect("mongodb://localhost:27017/blog-of-ikundefined", {useNewUrlParser:true}, function(){
+
+const { DB_HOST, DB_NAME, DB_USER = '', DB_PASS = '' } = process.env;
+if (!DB_HOST || !DB_NAME) {
+    console.error('please set DB_HOST or DB_NAME in ".env"');
+    process.exit(5);
+}
+
+mongoose.connect(`mongodb://${DB_USER}:${DB_PASS}@${DB_HOST}/${DB_NAME}`, {useNewUrlParser:true}, function(){
     console.log("database connect success");
     app.listen(3000);
     console.log("your blog is running in http://localhost:3000");
