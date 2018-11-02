@@ -5,85 +5,10 @@
         <title>文章页面</title>
         <link rel="stylesheet" href="/public/css/clean.css">
         <link rel="stylesheet" href="/public/css/header.css">
-        <style>
-            body{
-                background: #eee;
-            }
-            .header{
-                width: 100%;
-                height: 50px;
-                background: #ffffff;
-                top: 0;
-                z-index: 100;
-            }
-            .header .headNav{
-                width: 1200px;
-                height: 100%;
-                margin: 0 auto;
-            }
-            .headNav li{
-                line-height: 50px;
-                padding: 0 20px;
-                float: left;
-                cursor: pointer;
-            }
-            .headNav li:hover{
-                border-bottom: 2px solid #ccc;
-            }
-            .headNav a{
-                width: 100%;
-                height: 100%;
-                color: #000;
-                display: inline-block;
-            }
-            .main{
-                width: 1200px;
-                height: auto;
-                margin: 0 auto;
-            }
-            .main li{
-                float: left;
-                margin: 0 20px;
-            }
-            .mainTop{
-                width: auto;
-                height: auto;
-                margin: 20px 0;
-                padding: 10px;
-                border: 1px solid #ccc;
-                overflow: hidden;
-                border-radius: 10px;
-            }
-            .mainCenter{
-                padding: 10px;
-                background: #ffffff;
-                border-radius: 10px;
-            }
-            footer{
-                margin-top: 20px;
-                width: 100%;
-                height: 150px;
-                line-height: 150px;
-                text-align: center;
-                background: #ffffff;
-            }
-        </style>
+        <link rel="stylesheet" href="/public/css/main/article/article.css">
     </head>
     <body>
-        <div class="header">
-            <div class="headNav">
-                <nav>
-                    <ul>
-                        <li><a href="/">IKunDefined</a></li>
-                        <li><a href="#">分类</a></li>
-                        <li><a href="#">动态</a></li>
-                        <li><a href="#">留言</a></li>
-                        <li><a href="#">关于</a></li>
-                        <li><a href="#">实验</a></li>
-                    </ul>
-                </nav>
-            </div>
-        </div>
+        {% include "reuse/headbar.html" %}
         <div class="main">
             <div class="mainTop">
                 <h1>{{ contentInfo.title }}</h1>

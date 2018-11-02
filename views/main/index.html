@@ -4,11 +4,7 @@
         <meta charset="utf-8">
         <title>IKunDefined</title>
         <link rel="stylesheet" href="/public/css/clean.css">
-        <link rel="stylesheet" href="/public/css/main/headBar.css">
-        <link rel="stylesheet" href="/public/css/main/postArea.css">
-        <link rel="stylesheet" href="/public/css/main/personalIntro.css">
-        <link rel="stylesheet" href="/public/css/main/bottomArea.css">
-        <link rel="stylesheet" href="/public/css/main/userBox.css">
+        <link rel="stylesheet" href="/public/css/main/index/index.css">
         <script src="https://cdn.bootcss.com/jquery/1.12.4/jquery.js"></script>
         <script src="/public/js/main/index.js"></script>
         <style>
@@ -55,16 +51,7 @@
     </head>
     <body>
         <div id="wallpaper"></div>
-        <div id="head-bar">
-            <ul class="head-nav">
-                <li><a class="navlist" href="#">IKunDefined</a></li>
-                <li><a class="navlist" href="#">分类</a></li>
-                <li><a class="navlist" href="#">动态</a></li>
-                <li><a class="navlist" href="#">留言</a></li>
-                <li><a class="navlist" href="#">关于</a></li>
-                <li><a class="navlist" href="#">实验</a></li>
-            </ul>
-        </div>
+        {% include "reuse/headbar.html" %}
         <div class="main-layout">
             <div class="left">
                 {% if contents %}
