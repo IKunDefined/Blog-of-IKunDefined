@@ -12,6 +12,7 @@
     <table>
         <thead>
             <tr>
+                <th id="category-id">分类ID</th>
                 <th>分类名称</th>
                 <th>操作</th>
             </tr>
@@ -19,9 +20,11 @@
         <tbody> 
             {% for category in categories %}
             <tr>
+                <td>{{ category.id }}</td>
                 <td>{{ category.name }}</td>
                 <td>
-                    <button>删除</button>
+                    <button class="change">修改</button>
+                    <button class="delete">删除</button>
                 </td>
             </tr>
             {% endfor %}

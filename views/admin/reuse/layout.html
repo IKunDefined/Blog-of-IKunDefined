@@ -37,10 +37,12 @@
     <script src="/public/js/main/index.js"></script>
     {% if isCategory %}
         {% include "../include/addBox.html" %}
-        {% include "../include/addCategory.html" %}
+        {% include "../include/category.html" %}
     {% elseif isContent %}
         {% include "../include/addBox.html" %}
-        {% include "../include/addContent.html" %}
+        {% include "../include/content.html" %}
+    {% elseif isUser %}
+        {% include "../include/user.html" %}
     {% endif %}
 </body>
 </html>

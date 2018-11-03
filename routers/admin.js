@@ -36,7 +36,8 @@ router.get("/", function(req, res) {
 router.get("/user", function(req, res) {
     User.find().then(function(userInfo) {
         res.render("admin/user", {
-            users: userInfo
+            users: userInfo,
+            isUser: true
         });
     })
 })

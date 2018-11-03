@@ -9,7 +9,7 @@
     <table>
         <thead>
             <tr>
-                <th>用户ID</th>
+                <th id="user-id">用户ID</th>
                 <th>用户名</th>
                 <th>是否为管理员</th>
                 <th>操作</th>
@@ -22,7 +22,8 @@
                 <td>{{ user.username }}</td>
                 <td>{{ user.isAdmin }}</td>
                 <td>
-                    <button>删除</button>
+                    <button class="change">修改</button>
+                    <button class="delete">删除</button>
                 </td>
             </tr>
             {% endfor %}
