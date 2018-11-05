@@ -1,12 +1,14 @@
-$(".delete").click(function() {
+$(".delete").click(function(e) {
     $.ajax({
         type: "post",
         url: "/admin/content/delete",
         data: {
-            id: $("table>th:nth-of-type(1)").content()
+            id: e.currentTarget.parentElement.parentElement.firstElementChild.textContent
         },
         dataType: "json",
         success: function(responseData) {
+            alert(responseData.message);
+            location.reload();
         }
     });
 });

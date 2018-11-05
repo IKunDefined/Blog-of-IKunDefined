@@ -1,11 +1,14 @@
-$(".delete").click(function() {
-    console.log(this);
+$(".delete").click(function(e) {
     $.ajax({
         type: "post",
         url: "/admin/user/delete",
         data: {
-            id: $("#user-id")
+            id: e.currentTarget.parentElement.parentElement.firstElementChild.textContent
         },
-        dataType: "json"
+        dataType: "json",
+        success: function(responseData) {
+            alert(responseData.message);
+            location.reload();
+        }
     });
 });

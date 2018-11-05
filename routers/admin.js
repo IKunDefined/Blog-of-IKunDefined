@@ -42,6 +42,18 @@ router.get("/user", function(req, res) {
     })
 })
 
+router.post("/user/delete", function(req, res) {
+    var id = req.body.id;
+    User.deleteOne({
+        _id: id
+    }).then(function(successInfo) {
+        if (successInfo.ok) {
+            responseData.message = "用户删除成功";
+            res.json(responseData);
+        }
+    });
+});
+
 router.get("/category", function(req, res) {
     Category.find().then(function(categoryInfo) {
         if (!categoryInfo.length) {
@@ -83,8 +95,19 @@ router.post("/category/add", function(req, res) {
             res.json(responseData);
         }
     });
+});
 
-})
+router.post("/category/delete", function(req, res) {
+    var id = req.body.id;
+    Category.deleteOne({
+        _id: id
+    }).then(function(successInfo) {
+        if (successInfo.ok) {
+            responseData.message = "分类删除成功";
+            res.json(responseData);
+        }
+    });
+});
 
 router.get("/content", function(req, res) {
     Content.find().then(function(contentInfo) {
@@ -134,5 +157,17 @@ router.post("/content/add", function(req, res) {
         }
     });
 });
+
+router.post("/content/delete", function(req, res) {
+    var id = req.body.id;
+    Content.deleteOne({
+        _id: id
+    }).then(function(successInfo) {
+        if (successInfo.ok) {
+            responseData.message = "文章删除成功";
+            res.json(responseData);
+        }
+    });
+})
 
 module.exports = router;
