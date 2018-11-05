@@ -49,6 +49,8 @@
 
 * [Blog of IKunDefined](http://59.111.58.150/)
 
+    * 上线环境配置使用了[Docker](https://www.docker.com/)和[Dotenv](https://www.npmjs.com/package/dotenv)
+
 ***
 
 仍在升级、开发和维护中
