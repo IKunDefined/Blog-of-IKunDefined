@@ -16,6 +16,24 @@
         <div id="message-main">
             {% if userInfo %}
                 <textarea></textarea>
+                <button>留言</button>
+                {% if messages %}
+                    <ul>
+                        {% for message in messages %}
+                        <li>
+                            <p>
+                                <span>{{ message.author }}</span>
+                                <span>{{ message.date }}</span>
+                            </p>
+                            {{ message.content }}
+                        </li>
+                        {% endfor %}
+                    </ul>
+                {% else %}
+                    <p>
+                        暂时还没有人留言哦！
+                    </p>
+                {% endif %}
             {% else %}
                 请先登录账号
             {% endif %}
@@ -23,6 +41,8 @@
         </div>
         {% include "reuse/footer.html" %}
     </div>
+    <script src="https://cdn.bootcss.com/jquery/1.12.4/jquery.js"></script>
     <script src="/public/js/main/footer.js"></script>
+    <script src="/public/js/main/message.js"></script>
 </body>
 </html>

@@ -16,4 +16,3 @@ EXPOSE 3000
 
 # ENTRYPOINT [ "mongod", "-logpath", "/usr/src/app/mongo.log", "-fork"]
 CMD mongod -logpath /usr/src/app/mongo.log -fork && node app.js
-

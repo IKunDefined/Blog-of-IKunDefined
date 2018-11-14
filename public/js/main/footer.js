@@ -9,6 +9,7 @@ function load() {
 
   if (contentHeight < docHeight) {
     footer.style.position = "fixed";
-    footer.style.bottom = "0px";
+    footer.style.bottom = 0;
+    footer.style.left = 0;
   }
 }
