@@ -7,15 +7,18 @@
     <title>留言板</title>
     <link rel="stylesheet" href="/public/css/clean.css">
     <link rel="stylesheet" href="/public/css/reuse/headbar.css">
-    <link rel="stylesheet" href="/public/css/undo.css">
+    <link rel="stylesheet" href="/public/css/main/message/message.css">
     <link rel="stylesheet" href="/public/css/reuse/footer.css">
 </head>
 <body>
     <div id="wrap">
         {% include "reuse/headbar.html" %}
-        <div id="message-main" class="main">
-            留言页面
-            <span>暂未开放</span>
+        <div id="message-main">
+            {% if userInfo %}
+                <textarea></textarea>
+            {% else %}
+                请先登录账号
+            {% endif %}
             <a class="back" href="/">返回首页</a>
         </div>
         {% include "reuse/footer.html" %}

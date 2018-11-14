@@ -16,31 +16,38 @@
     <div id="wrap">
         {% include "reuse/headbar.html" %}
         <div id="dynamic-main">
-            {% if userInfo.isAdmin %}
-                {% include "dynamic/admin.html" %}
+            {% if userInfo %}
+                {% if userInfo.isAdmin %}
+                    <div id="dynamic-box">
+                        <textarea></textarea>
+                        <button>发布</button>
+                    </div>
+                {% else %}
+                    <a class="back" href="/">返回首页</a>
+                {% endif %}
+                {% if dynamics %}
+                    <ul>
+                        {% for dynamic in dynamics %}
+                        <li>
+                            <p>
+                                <span>
+                                    {{ dynamic.author }}
+                                </span>
+                                <span>
+                                    {{ dynamic.date }}
+                                </span>
+                            </p>
+                            {{ dynamic.content }}
+                        </li>
+                        {% endfor %}
+                    </ul>
+                {% else %}
+                    <div>
+                        暂且还没有动态
+                    </div>
+                {% endif %}
             {% else %}
-                <a class="back" href="/">返回首页</a>
-            {% endif %}
-            {% if dynamics %}
-                <ul>
-                    {% for dynamic in dynamics %}
-                    <li>
-                        <p>
-                            <span>
-                                {{ dynamic.author }}
-                            </span>
-                            <span>
-                                {{ dynamic.date }}
-                            </span>
-                        </p>
-                        {{ dynamic.content }}
-                    </li>
-                    {% endfor %}
-                </ul>
-            {% else %}
-                <div>
-                    暂且还没有动态
-                </div>
+                请先登录账号
             {% endif %}
         </div>
         {% include "reuse/footer.html" %}

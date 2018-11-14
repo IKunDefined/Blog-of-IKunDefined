@@ -13,25 +13,31 @@ router.use(function (req, res, next) {
 });
 
 router.get("/", function (req, res, next) {
-    User.findOne({
-        username: req.userInfo.username
-    }).then(function (userInfo) {
-        if (userInfo) {
-            req.userInfo.isAdmin = userInfo.isAdmin;
-        }
-        Dynamic.find().then(function (dynamicInfo) {
-            if (dynamicInfo.length) {
-                res.render("main/dynamic", {
-                    userInfo: req.userInfo,
-                    dynamics: dynamicInfo
-                });
-            } else {
-                res.render("main/dynamic", {
-                    userInfo: req.userInfo
+    if (req.userInfo) {
+        User.findOne({
+            username: req.userInfo.username
+        }).then(function (userInfo) {
+            if (userInfo) {
+                req.userInfo.isAdmin = userInfo.isAdmin;
+                Dynamic.find().then(function (dynamicInfo) {
+                    if (dynamicInfo.length) {
+                        res.render("main/dynamic", {
+                            userInfo: req.userInfo,
+                            dynamics: dynamicInfo
+                        });
+                    } else {
+                        res.render("main/dynamic", {
+                            userInfo: req.userInfo
+                        });
+                    }
                 });
             }
         });
-    });
+    } else {
+        res.render("main/dynamic", {
+            userInfo: null
+        });
+    }
 });
 
 router.post("/post", function(req, res) {
