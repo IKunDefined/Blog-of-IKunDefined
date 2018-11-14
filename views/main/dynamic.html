@@ -5,9 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>个人动态</title>
+    <link rel="stylesheet" href="/public/css/clean.css">
+    <link rel="stylesheet" href="/public/css/reuse/headbar.css">
+    <link rel="stylesheet" href="/public/css/undo.css">
+    <style>
+    </style>
 </head>
 <body>
-    个人动态页面
-    <a href="/">返回首页</a>
+    {% include "reuse/headbar.html" %}
+    <div id="dynamic-main" class="main">
+        个人动态页面
+        <span>暂未开放</span>
+        <a href="/">返回首页</a>
+    </div>
 </body>
 </html>

@@ -11,17 +11,6 @@
 
             /* Basic Style */
 
-            @font-face {
-                font-family: "华文细黑";
-                src: url("/public/font/华文细黑.ttf");
-            }
-
-            html,body {
-                height: 100%;
-                background: #eee;
-                font-family: "华文细黑";
-            }
-
             #wallpaper {
                 width: 100%;
                 height: 100%;
@@ -45,6 +34,31 @@
 
             .main-layout > .right {
                 width: 30%;
+            }
+
+            header {
+                padding: 0 10px;
+                height: 40px;
+                line-height: 40px;
+                border-bottom: 1px solid #ccc;
+                box-shadow: 0 0 2px 2px #ccc;
+            }
+
+            header .left {
+                float: left;
+            }
+
+            header li {
+                float: left;
+                margin-left: 10px;
+            }
+
+            header .right {
+                float: right;
+            }
+
+            .main {
+                padding: 20px;
             }
             
         </style>
@@ -92,10 +106,10 @@
                         <p class="motto">- 矛盾共生体 -</p>
                     </div>
                     <ul class="social-link">
-                        <li class="bilibili_1 linkicons" onclick="location.href='https://space.bilibili.com/15563957'"></li>
-                        <li class="bilibili_2 linkicons" onclick="location.href='https://space.bilibili.com/1395467'"></li>
-                        <li class="github linkicons" onclick="location.href='https://github.com/ikundefined'"></li>
-                        <li class="weibo linkicons" onclick="location.href='https://weibo.com/p/1005052021331643'"></li>
+                        <li class="bilibili_1 linkicons" onclick="window.open('https://space.bilibili.com/15563957')"></li>
+                        <li class="bilibili_2 linkicons" onclick="window.open('https://space.bilibili.com/1395467')"></li>
+                        <li class="github linkicons" onclick="window.open('https://github.com/ikundefined')"></li>
+                        <li class="weibo linkicons" onclick="window.open('https://weibo.com/p/1005052021331643')"></li>
                     </ul>
                 </div>
                 {% if userInfo %}

@@ -39,7 +39,7 @@
 1. `git clone https://github.com/IKunDefined/Blog-of-IKunDefined.git`或者下载.zip压缩包
 2. `cd blog-of-ikundefined`
 3. `npm install`或者`cnpm install`
-4. `mongod dbpath="数据存储文件夹路径"`
+4. `mongod --dbpath="数据存储文件夹路径"`
 
     * 文件夹自行创建
 

@@ -5,11 +5,12 @@
         <title>文章页面</title>
         <link rel="stylesheet" href="/public/css/clean.css">
         <link rel="stylesheet" href="/public/css/header.css">
+        <link rel="stylesheet" href="/public/css/reuse/headbar.css">
         <link rel="stylesheet" href="/public/css/main/article/article.css">
     </head>
     <body>
         {% include "reuse/headbar.html" %}
-        <div class="main">
+        <div id="article-main" class="main">
             <div class="mainTop">
                 <h1>{{ contentInfo.title }}</h1>
                 <div class="subInfo">
