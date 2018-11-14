@@ -7,16 +7,46 @@
     <title>个人动态</title>
     <link rel="stylesheet" href="/public/css/clean.css">
     <link rel="stylesheet" href="/public/css/reuse/headbar.css">
-    <link rel="stylesheet" href="/public/css/undo.css">
+    <link rel="stylesheet" href="/public/css/main/dynamic/dynamic.css">
+    <link rel="stylesheet" href="/public/css/reuse/footer.css">
     <style>
     </style>
 </head>
 <body>
-    {% include "reuse/headbar.html" %}
-    <div id="dynamic-main" class="main">
-        个人动态页面
-        <span>暂未开放</span>
-        <a href="/">返回首页</a>
+    <div id="wrap">
+        {% include "reuse/headbar.html" %}
+        <div id="dynamic-main">
+            {% if userInfo.isAdmin %}
+                {% include "dynamic/admin.html" %}
+            {% else %}
+                <a class="back" href="/">返回首页</a>
+            {% endif %}
+            {% if dynamics %}
+                <ul>
+                    {% for dynamic in dynamics %}
+                    <li>
+                        <p>
+                            <span>
+                                {{ dynamic.author }}
+                            </span>
+                            <span>
+                                {{ dynamic.date }}
+                            </span>
+                        </p>
+                        {{ dynamic.content }}
+                    </li>
+                    {% endfor %}
+                </ul>
+            {% else %}
+                <div>
+                    暂且还没有动态
+                </div>
+            {% endif %}
+        </div>
+        {% include "reuse/footer.html" %}
     </div>
+    <script src="https://cdn.bootcss.com/jquery/1.12.4/jquery.js"></script>
+    <script src="/public/js/main/dynamic.js"></script>
+    <script src="/public/js/main/footer.js"></script>
 </body>
 </html>

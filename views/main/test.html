@@ -8,13 +8,18 @@
     <link rel="stylesheet" href="/public/css/clean.css">
     <link rel="stylesheet" href="/public/css/reuse/headbar.css">
     <link rel="stylesheet" href="/public/css/undo.css">
+    <link rel="stylesheet" href="/public/css/reuse/footer.css">
 </head>
 <body>
-    {% include "reuse/headbar.html" %}
-    <div id="test-main" class="main">
-        实验样品页面
-        <span>暂未开放</span>
-        <a href="/">返回首页</a>
+    <div id="wrap">
+        {% include "reuse/headbar.html" %}
+        <div id="test-main" class="main">
+            实验样品页面
+            <span>暂未开放</span>
+            <a class="back" href="/">返回首页</a>
+        </div>
+        {% include "reuse/footer.html" %}
     </div>
+    <script src="/public/js/main/footer.js"></script>
 </body>
 </html>

@@ -5,9 +5,16 @@
   background: #fff;
   margin-top: 20px;
   text-align: center;
-  line-height: 300px;
+  position: relative;
+  padding: 20px;
 }
 
 .main span {
   color: red;
+}
+
+.back {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
 }

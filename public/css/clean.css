@@ -35,3 +35,11 @@ a{
     color: #000;
     text-decoration: none;
 }
+
+button, input, textarea {
+    outline: none;
+}
+
+textarea {
+    resize: none;
+}

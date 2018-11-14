@@ -4,34 +4,35 @@
         <meta charset="UTF-8">
         <title>文章页面</title>
         <link rel="stylesheet" href="/public/css/clean.css">
-        <link rel="stylesheet" href="/public/css/header.css">
         <link rel="stylesheet" href="/public/css/reuse/headbar.css">
         <link rel="stylesheet" href="/public/css/main/article/article.css">
+        <link rel="stylesheet" href="/public/css/reuse/footer.css">
     </head>
     <body>
-        {% include "reuse/headbar.html" %}
-        <div id="article-main" class="main">
-            <div class="mainTop">
-                <h1>{{ contentInfo.title }}</h1>
-                <div class="subInfo">
-                    <ul>
-                        <li>
-                            作者：{{ contentInfo.author }}
-                        </li>
-                        <li>
-                            日期：{{ contentInfo.date }}
-                        </li>
-                        <!-- <li>分类</li>
-                        <li>标签</li> -->
-                    </ul>
+        <div id="wrap">
+            {% include "reuse/headbar.html" %}
+            <div id="article-main" class="main">
+                <div class="mainTop">
+                    <h1>{{ contentInfo.title }}</h1>
+                    <div class="subInfo">
+                        <ul>
+                            <li>
+                                作者：{{ contentInfo.author }}
+                            </li>
+                            <li>
+                                日期：{{ contentInfo.date }}
+                            </li>
+                            <!-- <li>分类</li>
+                            <li>标签</li> -->
+                        </ul>
+                    </div>
+                </div>
+                <div class="mainCenter">
+                    <p>{{ contentInfo.article }}</p>
                 </div>
             </div>
-            <div class="mainCenter">
-                <p>{{ contentInfo.article }}</p>
-            </div>
+            {% include "reuse/footer.html" %}
         </div>
-        <footer>
-            - Build by IKunDefined -
-        </footer>
+        <script src="/public/js/main/footer.js"></script>
     </body>
 </html>

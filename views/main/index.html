@@ -5,6 +5,7 @@
         <title>IKunDefined</title>
         <link rel="stylesheet" href="/public/css/clean.css">
         <link rel="stylesheet" href="/public/css/main/index/index.css">
+        <link rel="stylesheet" href="/public/css/reuse/footer.css">
         <style>
 
             /* Basic Style */
@@ -73,7 +74,7 @@
                 <div class="personal-intro">
                     <div class="personal-info">
                         <div class="avatar">
-                            <img src="/public/images/avatar.jpg" alt="个人头像" title="IKunDefined">
+                            <img src="/public/images/avatar.jpg" alt="个人头像" title="IKunDefined" onclick="location.href='/about'">
                         </div>
                         <h2 class="name">IKunDefined</h2>
                         <p class="motto">- 矛盾共生体 -</p>
@@ -140,9 +141,7 @@
                 {%endif%}
             </div>
         </div>
-        <div class="bottom-area">
-            - Build by IKunDefined -
-        </div>
+        {% include "reuse/footer.html" %}
         <script src="https://cdn.bootcss.com/jquery/1.12.4/jquery.js"></script>
         <script src="/public/js/main/effect/index.js"></script>
         <script src="/public/js/main/interact/index.js"></script>
