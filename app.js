@@ -36,7 +36,7 @@ app.use("/admin", require("./routers/admin"));
 app.use("/article", require("./routers/article"));
 app.use("/dynamic", require("./routers/dynamic"));
 app.use("/message", require("./routers/message"));
-app.use("/test", require("./routers/test"));
+app.use("/demo", require("./routers/demo"));
 app.use("/about", require("./routers/about"));
 app.use("/resume", require("./routers/resume"));
 

@@ -1,0 +1,51 @@
+#resume-main {
+  width: 1100px;
+  margin: 0 auto;
+  background: #fff;
+  margin-top: 20px;
+  position: relative;
+}
+
+.back {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+}
+
+.side-bar {
+  width: 30%;
+  padding: 20px;
+  text-align: center;
+  border-right: 1px dashed #ccc;
+}
+
+.side-bar img {
+  display: block;
+  width: 150px;
+  border-radius: 50%;
+  border: 1px solid #ccc;
+  margin: 0 auto;
+  margin-bottom: 10px;
+}
+
+.side-bar h2,
+.side-bar p {
+  margin-bottom: 10px;
+}
+
+.side-bar p {
+  font-size: 14px;
+}
+
+.side-bar p:last-of-type {
+  margin-bottom: 0;
+}
+
+#resume-main .main {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 70%;
+  padding: 20px;
+  text-align: center;
+}
