@@ -31,7 +31,7 @@ swig.setDefaults({
 app.use("/public", express.static(__dirname + "/public"));
 
 app.use("/", require("./routers/main"));
-app.use("/api", require("./routers/api"));
+app.use("/user", require("./routers/user"));
 app.use("/admin", require("./routers/admin"));
 app.use("/article", require("./routers/article"));
 app.use("/dynamic", require("./routers/dynamic"));

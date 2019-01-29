@@ -15,7 +15,7 @@ $(function(){
     $signupBox.find("input[type=button]").on("click",function(){
         $.ajax({
             type: "post",                                  
-            url: "/api/user/register",                  
+            url: "/user/register",                  
             data: {                                       
                 username: $signupBox.find("[name='username']").val(),
                 password: $signupBox.find("[name='password']").val(),
@@ -37,7 +37,7 @@ $(function(){
     $loginBox.find("input[type=button]").on("click",function(){
         $.ajax({
             type: "post",
-            url: "/api/user/login",
+            url: "/user/login",
             data: {
                 username: $loginBox.find("input[name='username']").val(),
                 password: $loginBox.find("input[name='password']").val()
@@ -56,7 +56,7 @@ $(function(){
 
     $logoutButton.on("click", function() {
         $.ajax({
-            url: "/api/user/logout",
+            url: "/user/logout",
             success: function(responseData) {
                 if (!responseData.code) {
                     setTimeout(function() {
