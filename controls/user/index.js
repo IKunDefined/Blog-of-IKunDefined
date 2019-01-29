@@ -1,11 +1,11 @@
-const register = require('./register');
-const login = require('./login');
-const logout = require('./logout');
+const userRegister = require('./userRegister');
+const userLogin = require('./userLogin');
+const userLogout = require('./userLogout');
 
 const userController = {
-  register,
-  login,
-  logout
+  userRegister,
+  userLogin,
+  userLogout
 }
 
 module.exports = userController;
