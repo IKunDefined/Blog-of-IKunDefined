@@ -6,17 +6,17 @@ var Content = require("../models/Content");
 
 var responseData = {};
 
-router.use(function(req, res, next) {
+router.use(function (req, res, next) {
     responseData.code = 0;
     responseData.message = "";
     next();
 })
 
-router.use(function(req, res, next) {
-    if (req.userInfo){
+router.use(function (req, res, next) {
+    if (req.userInfo) {
         User.findOne({
             username: req.userInfo.username
-        }).then(function(userInfo) {
+        }).then(function (userInfo) {
             req.userInfo.isAdmin = userInfo.isAdmin;
             if (req.userInfo.isAdmin) {
                 next();
@@ -29,24 +29,24 @@ router.use(function(req, res, next) {
     }
 });
 
-router.get("/", function(req, res) {
+router.get("/", function (req, res) {
     res.render("admin/index");
 });
 
-router.get("/user", function(req, res) {
-    User.find().then(function(userInfo) {
+router.get("/user", function (req, res) {
+    User.find().then(function (userInfo) {
         res.render("admin/user", {
             users: userInfo,
             isUser: true
         });
-    })
-})
+    });
+});
 
-router.post("/user/delete", function(req, res) {
+router.post("/user/delete", function (req, res) {
     var id = req.body.id;
     User.deleteOne({
         _id: id
-    }).then(function(successInfo) {
+    }).then(function (successInfo) {
         if (successInfo.ok) {
             responseData.message = "用户删除成功";
             res.json(responseData);
@@ -54,8 +54,8 @@ router.post("/user/delete", function(req, res) {
     });
 });
 
-router.get("/category", function(req, res) {
-    Category.find().then(function(categoryInfo) {
+router.get("/category", function (req, res) {
+    Category.find().then(function (categoryInfo) {
         if (!categoryInfo.length) {
             res.render("admin/category", {
                 categories: null,
@@ -70,8 +70,8 @@ router.get("/category", function(req, res) {
     });
 });
 
-router.post("/category/add", function(req, res) {
-    var name = req.body.name;
+router.post("/category/add", function (req, res) {
+    var name = req.body.name
     if (name === "") {
         responseData.code = 1;
         responseData.message = "分类名称不能为空";
@@ -80,14 +80,14 @@ router.post("/category/add", function(req, res) {
     }
     Category.findOne({
         name: name
-    }).then(function(categoryInfo) {
+    }).then(function (categoryInfo) {
         if (categoryInfo) {
             responseData.code = 2;
             responseData.message = "已存在该分类名称";
             res.json(responseData);
-            return
+            return;
         } else {
-            var category = new  Category({
+            var category = new Category({
                 name: name
             });
             category.save();
@@ -97,11 +97,11 @@ router.post("/category/add", function(req, res) {
     });
 });
 
-router.post("/category/delete", function(req, res) {
+router.post("/category/delete", function (req, res) {
     var id = req.body.id;
     Category.deleteOne({
         _id: id
-    }).then(function(successInfo) {
+    }).then(function (successInfo) {
         if (successInfo.ok) {
             responseData.message = "分类删除成功";
             res.json(responseData);
@@ -109,8 +109,8 @@ router.post("/category/delete", function(req, res) {
     });
 });
 
-router.get("/content", function(req, res) {
-    Content.find().then(function(contentInfo) {
+router.get("/content", function (req, res) {
+    Content.find().then(function (contentInfo) {
         if (!contentInfo.length) {
             res.render("admin/content", {
                 contents: null,
@@ -125,7 +125,7 @@ router.get("/content", function(req, res) {
     });
 });
 
-router.post("/content/add", function(req, res) {
+router.post("/content/add", function (req, res) {
     var title = req.body.title;
     var summary = req.body.summary;
     var article = req.body.article;
@@ -137,7 +137,7 @@ router.post("/content/add", function(req, res) {
     }
     Content.findOne({
         title: title
-    }).then(function(contentInfo) {
+    }).then(function (contentInfo) {
         if (contentInfo) {
             responseData.code = 2;
             responseData.message = "文章名已存在";
@@ -158,16 +158,16 @@ router.post("/content/add", function(req, res) {
     });
 });
 
-router.post("/content/delete", function(req, res) {
+router.post("/content/delete", function (req, res) {
     var id = req.body.id;
     Content.deleteOne({
         _id: id
-    }).then(function(successInfo) {
+    }).then(function (successInfo) {
         if (successInfo.ok) {
             responseData.message = "文章删除成功";
             res.json(responseData);
         }
     });
-})
+});
 
 module.exports = router;

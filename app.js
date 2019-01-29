@@ -5,7 +5,7 @@ const bodyParser = require("body-parser");
 const Cookies = require("cookies");
 
 // 读取配置文件
-require('dotenv').config()
+require('dotenv').config();
 
 const app = express();
 
@@ -40,7 +40,6 @@ app.use("/demo", require("./routers/demo"));
 app.use("/about", require("./routers/about"));
 app.use("/resume", require("./routers/resume"));
 
-
 const {
     DB_HOST,
     DB_NAME,
@@ -59,6 +58,6 @@ mongoose.connect(`mongodb://${DB_USER}:${DB_PASS}@${DB_HOST}/${DB_NAME}`, {
         app.listen(3000);
         console.log("your blog is running in http://localhost:3000");
     } else {
-        console.log(err)
+        console.log(err);
     }
 });
