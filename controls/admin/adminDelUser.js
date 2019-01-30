@@ -6,7 +6,8 @@ module.exports = function (req, res) {
       code: 0,
       message: ""
   }
-  var id = req.body.id;
+  
+  var id = req.body.body.id;
   User.deleteOne({
       _id: id
   }).then(function (successInfo) {

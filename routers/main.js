@@ -10,7 +10,6 @@ router.use(function(req, res, next) {
         User.findOne({
             username: req.userInfo.username
         }).then(function(userInfo) {
-            console.log(req.userInfo)
             isAdmin = userInfo.isAdmin;
             next();
         });

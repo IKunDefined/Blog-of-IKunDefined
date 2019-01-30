@@ -2,6 +2,7 @@ const express = require("express");
 const swig = require("swig");
 const mongoose = require("mongoose");
 const bodyParser = require("body-parser");
+const cors = require('cors');
 const Cookies = require("cookies");
 
 // 读取配置文件
@@ -9,9 +10,7 @@ require('dotenv').config();
 
 const app = express();
 
-app.use(bodyParser.urlencoded({
-    extended: true
-}));
+app.use(cors());
 
 app.use(function (req, res, next) {
     req.cookies = new Cookies(req, res);

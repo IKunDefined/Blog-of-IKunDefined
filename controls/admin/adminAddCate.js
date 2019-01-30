@@ -6,7 +6,7 @@ module.exports = function (req, res) {
     code: 0,
     message: ""
   }
-  var name = req.body.name
+  var name = req.body.body.name
   if (name === "") {
     responseData.code = 1;
     responseData.message = "分类名称不能为空";

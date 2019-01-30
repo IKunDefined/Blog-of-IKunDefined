@@ -6,7 +6,6 @@ module.exports = (req, res) => {
       code: 0,
       message: ""
   }
-
   let username = req.body.username;
   let password = req.body.password;
   if(username === "" || password === "") {

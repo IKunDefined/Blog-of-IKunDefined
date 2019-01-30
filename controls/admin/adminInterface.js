@@ -20,5 +20,5 @@ router.use(function (req, res, next) {
 });
 
 module.exports = function (req, res) {
-  res.render("admin/index");
+  res.redirect("http://localhost:8080")
 }

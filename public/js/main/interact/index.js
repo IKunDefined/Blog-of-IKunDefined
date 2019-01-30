@@ -14,21 +14,22 @@ $(function(){
 
     $signupBox.find("input[type=button]").on("click",function(){
         $.ajax({
-            type: "post",                                  
-            url: "/user/register",                  
-            data: {                                       
+            type: "post",
+            url: "/user/register",
+            data: {
                 username: $signupBox.find("[name='username']").val(),
                 password: $signupBox.find("[name='password']").val(),
                 repassword: $signupBox.find("[name='repassword']").val()
             },
-            dataType: "json",                                      
-            success: function(result) {                           
+            dataType: "json",
+            success: function(result) {
+                console.log($signupBox.find("[name='username']").val())
                 $signupBox.find(".warning").html(result.message);
-                if(!result.code){                                 
+                if(!result.code){
                     setTimeout(function(){
-                        $loginBox.show();                         
-                        $signupBox.hide();                         
-                    }, 1000);                                   
+                        $loginBox.show();
+                        $signupBox.hide();
+                    }, 1000);
                 }
             }
         });
