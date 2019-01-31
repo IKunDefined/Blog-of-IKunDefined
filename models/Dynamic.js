@@ -1,4 +1,4 @@
-var mongoose = require("mongoose");
-var dynamicSchema = require("../schemas/dynamic");
+const mongoose = require('mongoose')
+const dynamicSchema = require('../schemas/dynamic')
 
-module.exports = mongoose.model("Dynamic", dynamicSchema);
+module.exports = mongoose.model('Dynamic', dynamicSchema)

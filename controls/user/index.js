@@ -1,6 +1,6 @@
-const userRegister = require('./userRegister');
-const userLogin = require('./userLogin');
-const userLogout = require('./userLogout');
+const userRegister = require('./userRegister')
+const userLogin = require('./userLogin')
+const userLogout = require('./userLogout')
 
 const userController = {
   userRegister,
@@ -8,4 +8,4 @@ const userController = {
   userLogout
 }
 
-module.exports = userController;
+module.exports = userController

@@ -1,19 +1,19 @@
-const User = require("../../models/User");
+const User = require('../../models/User')
 
 module.exports = function (req, res) {
-  let responseData;
+  let responseData
   responseData = {
-      code: 0,
-      message: ""
+    code: 0,
+    message: ''
   }
-  
-  var id = req.body.body.id;
+
+  let id = req.body.body.id
   User.deleteOne({
-      _id: id
+    _id: id
   }).then(function (successInfo) {
-      if (successInfo.ok) {
-          responseData.message = "用户删除成功";
-          res.json(responseData);
-      }
-  });
+    if (successInfo.ok) {
+      responseData.message = '用户删除成功'
+      res.json(responseData)
+    }
+  })
 }

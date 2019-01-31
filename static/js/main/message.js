@@ -1,18 +1,18 @@
-$("button").click(function () {
+$('button').click(function () {
   $.ajax({
-    type: "post",
-    url: "/message/update",
+    type: 'post',
+    url: '/message/update',
     data: {
-      content: $("textarea").val()
+      content: $('textarea').val()
     },
-    success: function(responseData) {
+    success: function (responseData) {
       if (!responseData.code) {
-        alert(responseData.message);
-        location.reload();
+        window.alert(responseData.message)
+        window.location.reload()
       } else {
-        alert(responseData.message);
+        window.alert(responseData.message)
       }
     }
-  });
-  $("textarea").val("");
-});
+  })
+  $('textarea').val('')
+})

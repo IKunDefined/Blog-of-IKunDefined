@@ -1,7 +1,7 @@
-const mongoose = require("mongoose");
+const mongoose = require('mongoose')
 
 module.exports = new mongoose.Schema({
   content: String,
   author: String,
   date: String
-});
+})
