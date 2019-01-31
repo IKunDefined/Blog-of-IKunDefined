@@ -1,9 +1,9 @@
-$("button").click(function () {
+$('button').click(function() {
   $.ajax({
-    type: "post",
-    url: "/dynamic/update",
+    type: 'post',
+    url: '/dynamic/update',
     data: {
-      content: $("textarea").val()
+      content: $('textarea').val(),
     },
     success: function(responseData) {
       if (!responseData.code) {
@@ -12,7 +12,7 @@ $("button").click(function () {
       } else {
         alert(responseData.message);
       }
-    }
+    },
   });
-  $("textarea").val("");
+  $('textarea').val('');
 });

@@ -1,3 +1,3 @@
 module.exports = function (req, res) {
-  res.render("main/demo");
+  res.render("demo");
 }

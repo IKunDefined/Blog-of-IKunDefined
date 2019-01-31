@@ -12,13 +12,13 @@ module.exports = function(req, res){
   }
   Content.find().then(function(contentInfo) {
       if (!contentInfo.length) {
-          res.render("main/index", {
+          res.render("index", {
               userInfo: req.userInfo,
               isAdmin: isAdmin,
               contents: null
           });
       } else {
-          res.render("main/index", {
+          res.render("index", {
               userInfo: req.userInfo,
               isAdmin: isAdmin,
               contents: contentInfo

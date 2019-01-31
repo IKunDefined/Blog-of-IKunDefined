@@ -113,17 +113,17 @@
 }
 
 .personal-intro > .social-link > .bilibili_1, .bilibili_2 {
-    background: url("/public/images/icons/bilibili.png") no-repeat;
+    background: url("/static/images/icons/bilibili.png") no-repeat;
     background-size: cover;
 }
 
 .personal-intro > .social-link > .github {
-    background: url("/public/images/icons/github.png") no-repeat;
+    background: url("/static/images/icons/github.png") no-repeat;
     background-size: cover;
 }
 
 .personal-intro > .social-link > .weibo {
-    background: url("/public/images/icons/weibo.png") no-repeat;
+    background: url("/static/images/icons/weibo.png") no-repeat;
     background-size: cover;
 }
 

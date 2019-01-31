@@ -1,6 +1,6 @@
-var express = require("express");
-var router = express.Router();
-var Content = require("../models/Content");
+const express = require("express");
+const router = express.Router();
+const Content = require("../models/Content");
 
 router.use(function(req, res, next) {
     router.get(req.url, function(req, res) {

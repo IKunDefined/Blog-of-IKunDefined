@@ -5,16 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>个人动态</title>
-    <link rel="stylesheet" href="/public/css/clean.css">
-    <link rel="stylesheet" href="/public/css/reuse/headbar.css">
-    <link rel="stylesheet" href="/public/css/main/dynamic/dynamic.css">
-    <link rel="stylesheet" href="/public/css/reuse/footer.css">
+    <link rel="stylesheet" href="/static/css/clean.css">
+    <link rel="stylesheet" href="/static/css/reuse/headbar.css">
+    <link rel="stylesheet" href="/static/css/main/dynamic/dynamic.css">
+    <link rel="stylesheet" href="/static/css/reuse/footer.css">
     <style>
     </style>
 </head>
 <body>
     <div id="wrap">
-        {% include "reuse/headbar.html" %}
+        {% include "public/headbar.html" %}
         <div id="dynamic-main">
             {% if userInfo %}
                 {% if userInfo.isAdmin %}
@@ -50,10 +50,10 @@
                 请先登录账号
             {% endif %}
         </div>
-        {% include "reuse/footer.html" %}
+        {% include "public/footer.html" %}
     </div>
     <script src="https://cdn.bootcss.com/jquery/1.12.4/jquery.js"></script>
-    <script src="/public/js/main/dynamic.js"></script>
-    <script src="/public/js/main/footer.js"></script>
+    <script src="/static/js/main/dynamic.js"></script>
+    <script src="/static/js/main/footer.js"></script>
 </body>
 </html>

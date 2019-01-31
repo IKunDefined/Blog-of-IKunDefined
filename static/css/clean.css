@@ -6,7 +6,7 @@
 
 @font-face {
     font-family: "华文细黑";
-    src: url("/public/font/华文细黑.ttf");
+    src: url("/static/font/华文细黑.ttf");
 }
 
 html,body {

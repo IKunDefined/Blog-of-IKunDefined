@@ -53,7 +53,7 @@ swig.setDefaults({
 });
 
 // 配置静态文件托管
-app.use("/public", express.static(__dirname + "/public"));
+app.use("/static", express.static(__dirname + "/static"));
 
 // 首页路由
 app.use("/", require("./routers/main"));

@@ -10,12 +10,12 @@ module.exports = function (req, res) {
               req.userInfo.isAdmin = userInfo.isAdmin;
               Dynamic.find().then(function (dynamicInfo) {
                   if (dynamicInfo.length) {
-                      res.render("main/dynamic", {
+                      res.render("dynamic", {
                           userInfo: req.userInfo,
                           dynamics: dynamicInfo
                       });
                   } else {
-                      res.render("main/dynamic", {
+                      res.render("dynamic", {
                           userInfo: req.userInfo
                       });
                   }
@@ -23,7 +23,7 @@ module.exports = function (req, res) {
           }
       });
   } else {
-      res.render("main/dynamic", {
+      res.render("dynamic", {
           userInfo: null
       });
   }
