@@ -1,39 +1,19 @@
 const express = require("express");
 const router = express.Router();
-const Content = require("../models/Content");
-const User = require("../models/User");
+const bodyParser = require('body-parser');
+const mainController = require('../controls/main');
 
-var isAdmin;
+router.use(bodyParser.urlencoded({
+    extended: true
+}))
 
-router.use(function(req, res, next) {
-    if (req.userInfo) {
-        User.findOne({
-            username: req.userInfo.username
-        }).then(function(userInfo) {
-            isAdmin = userInfo.isAdmin;
-            next();
-        });
-    } else {
-        next();
-    }  
-})
-
-router.get("/", function(req, res){
-    Content.find().then(function(contentInfo) {
-        if (!contentInfo.length) {
-            res.render("main/index", {
-                userInfo: req.userInfo,
-                isAdmin: isAdmin,
-                contents: null
-            });
-        } else {
-            res.render("main/index", {
-                userInfo: req.userInfo,
-                isAdmin: isAdmin,
-                contents: contentInfo
-            });
-        }
-    });
-});
+router.get("/", mainController.indexInterface);
+router.get("/dynamic", mainController.dynamicInterface);
+router.post("/dynamic/update", mainController.dynamicUpdate);
+router.get("/message", mainController.messageInterface);
+router.post("/message/update", mainController.messageUpdate);
+router.get("/about", mainController.aboutInterface);
+router.get("/demo", mainController.demoInterface);
+router.get("/resume", mainController.resumeInterface);
 
 module.exports = router;

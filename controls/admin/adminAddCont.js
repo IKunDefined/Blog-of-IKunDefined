@@ -9,7 +9,6 @@ module.exports = function (req, res) {
   let title = req.body.body.title;
   let summary = req.body.body.summary;
   let article = req.body.body.article;
-  console.log(req.cookies.get('userInfo'))
   if (title === "" || summary === "" || article === "") {
       responseData.code = 1;
       responseData.message = "文章名称、简介或内容姐不能为空";

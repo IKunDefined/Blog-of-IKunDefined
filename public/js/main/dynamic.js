@@ -1,7 +1,7 @@
 $("button").click(function () {
   $.ajax({
     type: "post",
-    url: "/dynamic/post",
+    url: "/dynamic/update",
     data: {
       content: $("textarea").val()
     },

@@ -6,7 +6,7 @@ module.exports = function (req, res) {
     code: 0,
     message: ""
   }
-  var id = req.body.id;
+  let id = req.body.body.id;
   Content.deleteOne({
       _id: id
   }).then(function (successInfo) {
