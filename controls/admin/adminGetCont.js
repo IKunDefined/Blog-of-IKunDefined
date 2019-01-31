@@ -6,7 +6,7 @@ module.exports = function (req, res) {
     responseData = {
         code: 0,
         message: "",
-        contentList: []
+        contentList: contentList
     }
     res.json(responseData)
     //   if (!contentInfo.length) {

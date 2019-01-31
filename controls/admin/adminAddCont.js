@@ -6,9 +6,10 @@ module.exports = function (req, res) {
     code: 0,
     message: ""
   }
-  var title = req.body.title;
-  var summary = req.body.summary;
-  var article = req.body.article;
+  let title = req.body.body.title;
+  let summary = req.body.body.summary;
+  let article = req.body.body.article;
+  console.log(req.cookies.get('userInfo'))
   if (title === "" || summary === "" || article === "") {
       responseData.code = 1;
       responseData.message = "文章名称、简介或内容姐不能为空";
@@ -24,11 +25,11 @@ module.exports = function (req, res) {
       res.json(responseData);
       return;
     } else {
-      var content = new Content({
+      let content = new Content({
         title: title,
         summary: summary,
         article: article,
-        author: req.userInfo.username,
+        author: JSON.parse(req.cookies.get("userInfo")).username,
         date: Date()
       });
       content.save();

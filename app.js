@@ -10,7 +10,23 @@ require('dotenv').config();
 
 const app = express();
 
-app.use(cors());
+// app.all('*',function(req, res, next) {
+//     res.header("Access-Control-Allow-Origin", req.headers.origin);
+//     res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
+//     res.header("Access-Control-Allow-Methods","PUT,POST,GET,DELETE,OPTIONS");
+//     res.header("Access-Control-Allow-Credentials",true);
+//     res.header("Content-Type", "application/json;charset=utf-8");
+//    next();
+// });
+
+let corsOptions = {
+    origin: 'http://localhost:8080',
+    //这一项是为了跨域专门设置的
+    credentials: true,
+    // maxAge: '1728000'
+}
+
+app.use(cors(corsOptions));
 
 app.use(function (req, res, next) {
     req.cookies = new Cookies(req, res);

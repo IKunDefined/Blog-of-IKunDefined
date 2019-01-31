@@ -7,6 +7,7 @@ router.use(bodyParser.json())
 
 router.get("/", adminController.adminInterface);
 router.get("/user/get", adminController.adminGetUser);
+router.post("/user/add", adminController.adminAddUser);
 router.post("/user/delete", adminController.adminDelUser);
 router.get("/category/get", adminController.adminGetCate);
 router.post("/category/add", adminController.adminAddCate);

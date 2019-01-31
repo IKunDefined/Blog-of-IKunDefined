@@ -1,5 +1,6 @@
 const adminInterface = require('./adminInterface');
 const adminGetUser = require('./adminGetUser');
+const adminAddUser = require('./adminAddUser');
 const adminDelUser = require('./adminDelUser');
 const adminGetCate = require('./adminGetCate');
 const adminAddCate = require('./adminAddCate');
@@ -11,6 +12,7 @@ const adminDelCont = require('./adminDelCont');
 const adminController = {
   adminInterface,
   adminGetUser,
+  adminAddUser,
   adminDelUser,
   adminGetCate,
   adminAddCate,
