@@ -15,5 +15,9 @@ router.post('/category/delete', adminController.adminDelCate)
 router.get('/content/get', adminController.adminGetCont)
 router.post('/content/add', adminController.adminAddCont)
 router.post('/content/delete', adminController.adminDelCont)
+router.get('/dynamic/get', adminController.adminGetDyna)
+router.post('dynamic/delete', adminController.adminDelDyna)
+router.get('/message/get', adminController.adminGetMess)
+router.post('/message/delete', adminController.adminDelMess)
 
 module.exports = router

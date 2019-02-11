@@ -1,38 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <title>文章页面</title>
-        <link rel="stylesheet" href="/static/css/clean.css">
-        <link rel="stylesheet" href="/static/css/reuse/headbar.css">
-        <link rel="stylesheet" href="/static/css/main/article/article.css">
-        <link rel="stylesheet" href="/static/css/reuse/footer.css">
-    </head>
-    <body>
-        <div id="wrap">
-            {% include "public/headbar.html" %}
-            <div id="article-main" class="main">
-                <div class="mainTop">
-                    <h1>{{ contentInfo.title }}</h1>
-                    <div class="subInfo">
-                        <ul>
-                            <li>
-                                作者：{{ contentInfo.author }}
-                            </li>
-                            <li>
-                                日期：{{ contentInfo.date }}
-                            </li>
-                            <!-- <li>分类</li>
+
+<head>
+    <meta charset="UTF-8">
+    <title>文章页面</title>
+    <link rel="stylesheet" href="/static/css/clean.css">
+    <link rel="stylesheet" href="/static/css/reuse/headbar.css">
+    <link rel="stylesheet" href="/static/css/main/article/article.css">
+    <link rel="stylesheet" href="/static/css/reuse/footer.css">
+    <link rel="stylesheet" href="/static/css/markdown.css">
+</head>
+
+<body>
+    <div id="wrap">
+        {% include "public/headbar.html" %}
+        <div id="article-main" class="main">
+            <div class="mainTop">
+                <h1>{{ contentInfo.title }}</h1>
+                <div class="subInfo">
+                    <ul>
+                        <li>
+                            作者：{{ contentInfo.author }}
+                        </li>
+                        <li>
+                            日期：{{ contentInfo.date }}
+                        </li>
+                        <!-- <li>分类</li>
                             <li>标签</li> -->
-                        </ul>
-                    </div>
-                </div>
-                <div class="mainCenter">
-                    <p>{{ contentInfo.article }}</p>
+                    </ul>
                 </div>
             </div>
-            {% include "public/footer.html" %}
+            <div class="mainCenter">
+                {% autoescape %}
+                    {{ article }}
+                {% endautoescape %}
+            </div>
         </div>
-        <script src="/static/js/main/footer.js"></script>
-    </body>
+        {% include "public/footer.html" %}
+    </div>
+    <script src="/static/js/main/footer.js"></script>
+</body>
+
 </html>

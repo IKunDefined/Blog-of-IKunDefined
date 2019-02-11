@@ -6,7 +6,7 @@ module.exports = function (req, res) {
     code: 0,
     message: ''
   }
-  var name = req.body.body.name
+  let name = req.body.body.name
   if (name === '') {
     responseData.code = 1
     responseData.message = '分类名称不能为空'
@@ -21,7 +21,7 @@ module.exports = function (req, res) {
       responseData.message = '已存在该分类名称'
       res.json(responseData)
     } else {
-      var category = new Category({
+      let category = new Category({
         name: name
       })
       category.save()

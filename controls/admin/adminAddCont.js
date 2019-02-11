@@ -1,5 +1,15 @@
 const Content = require('../../models/Content')
 
+function timeFormat (date) {
+  let year = date.getFullYear()
+  let month = date.getMonth() + 1
+  let day = date.getDate()
+  let hours = date.getHours()
+  let minutes = date.getMinutes()
+  let seconds = date.getSeconds()
+  return `${year}年${month}月${day}日${hours}时${minutes}分${seconds}秒`
+}
+
 module.exports = function (req, res) {
   let responseData
   responseData = {
@@ -28,7 +38,7 @@ module.exports = function (req, res) {
         summary: summary,
         article: article,
         author: JSON.parse(req.cookies.get('userInfo')).username,
-        date: Date()
+        date: timeFormat(new Date())
       })
       content.save()
       responseData.message = '文章发布成功'

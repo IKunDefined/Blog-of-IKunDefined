@@ -1,12 +1,12 @@
-const Content = require('../../models/Content')
+const Dynamic = require('../../models/Dynamic')
 
 module.exports = function (req, res) {
-  Content.find().then(function (contentList) {
+  Dynamic.find().then(function (dynamicList) {
     let responseData
     responseData = {
       code: 0,
       message: '',
-      contentList: contentList
+      dynamicList
     }
     res.json(responseData)
   })

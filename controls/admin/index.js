@@ -8,6 +8,10 @@ const adminDelCate = require('./adminDelCate')
 const adminGetCont = require('./adminGetCont')
 const adminAddCont = require('./adminAddCont')
 const adminDelCont = require('./adminDelCont')
+const adminGetDyna = require('./adminGetDyna')
+const adminDelDyna = require('./adminDelDyna')
+const adminGetMess = require('./adminGetMess')
+const adminDelMess = require('./adminDelMess')
 
 const adminController = {
   adminInterface,
@@ -19,7 +23,11 @@ const adminController = {
   adminDelCate,
   adminGetCont,
   adminAddCont,
-  adminDelCont
+  adminDelCont,
+  adminGetDyna,
+  adminDelDyna,
+  adminGetMess,
+  adminDelMess
 }
 
 module.exports = adminController

@@ -9,10 +9,10 @@ module.exports = function (req, res) {
       if (req.userInfo.isAdmin) {
         res.redirect('http://localhost:8080')
       } else {
-        res.render('main/jump')
+        res.render('jump')
       }
     })
   } else {
-    res.render('main/jump')
+    res.render('jump')
   }
 }

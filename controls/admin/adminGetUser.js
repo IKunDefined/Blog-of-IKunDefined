@@ -10,9 +10,5 @@ module.exports = function (req, res) {
   User.find().then(function (userList) {
     responseData.userList = userList
     res.json(responseData)
-    // res.render("admin/user", {
-    //     users: userInfo,
-    //     isUser: true
-    // });
   })
 }

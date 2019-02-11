@@ -1,4 +1,4 @@
-const User = require('../../models/User')
+const Message = require('../../models/Message')
 
 module.exports = function (req, res) {
   let responseData
@@ -7,11 +7,11 @@ module.exports = function (req, res) {
     message: ''
   }
   let id = req.body.body.id
-  User.deleteOne({
+  Message.deleteOne({
     _id: id
   }).then(function (successInfo) {
     if (successInfo.ok) {
-      responseData.message = '用户删除成功'
+      responseData.message = '留言删除成功'
       res.json(responseData)
     }
   })

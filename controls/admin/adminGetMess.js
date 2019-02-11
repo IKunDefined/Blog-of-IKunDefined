@@ -1,12 +1,12 @@
-const Content = require('../../models/Content')
+const Message = require('../../models/Message')
 
 module.exports = function (req, res) {
-  Content.find().then(function (contentList) {
+  Message.find().then(function (messageList) {
     let responseData
     responseData = {
       code: 0,
       message: '',
-      contentList: contentList
+      messageList
     }
     res.json(responseData)
   })
